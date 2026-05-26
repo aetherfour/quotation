@@ -7,17 +7,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <style>
   :root {
-    --bg: #0c0d10;
-    --surface: #14161a;
-    --surface2: #1c1f24;
-    --border: #282c34;
-    --accent: #ccb38c;
-    --accent2: #ddc9a6;
-    --text: #e6e3dc;
-    --muted: #888480;
-    --success: #5aab8f;
-    --danger: #c97b7b;
-    --gold: #ccb38c;
+    --bg: #0c0d10; --surface: #14161a; --surface2: #1c1f24;
+    --border: #282c34; --accent: #ccb38c; --accent2: #ddc9a6;
+    --text: #e6e3dc; --muted: #888480; --success: #5aab8f;
+    --danger: #c97b7b; --gold: #ccb38c;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', 'PingFang TC', 'Noto Sans TC', sans-serif; min-height: 100vh; }
@@ -575,7 +568,8 @@ function collectFormData(q) {
   q.qno = g('f-qno'); q.salesperson = g('f-salesperson'); q.salespersonPhone = g('f-salespersonPhone');
   q.date = g('f-date'); q.validDate = g('f-validDate');
   q.projectName = g('f-projectName'); q.projectNote = g('f-projectNote');
-  q.clientName = g('f-clientName'); q.clientContact = g('f-clientContact'); q.clientPhone = g('f-clientPhone'); q.clientAddress = g('f-clientAddress');
+  q.clientName = g('f-clientName'); q.clientContact = g('f-clientContact');
+  q.clientPhone = g('f-clientPhone'); q.clientAddress = g('f-clientAddress');
   q.terms.confirm = g('f-t-confirm'); q.terms.payment = g('f-t-payment');
   q.terms.deadline = g('f-t-deadline'); q.terms.warranty = g('f-t-warranty'); q.terms.extra = g('f-t-extra');
 }
@@ -924,11 +918,7 @@ function renderPreview() {
   </div>`;
 }
 
-function printQuote() {
-  const q = getCurrentQuote();
-  if (!q) { toast('請先選擇報價單', 'error'); return; }
-  collectFormData(q);
-  saveQuotes();
+function buildPrintHTML(q) {
   const { revenue, tax, revenueWithTax } = calcQuoteFinancials(q);
   const itemRows = q.items.map((item, i) => `
     <tr>
@@ -942,7 +932,7 @@ function printQuote() {
       <td style="vertical-align:top">${escHTML(item.unit)}</td>
       <td style="text-align:right;vertical-align:top">NT$ ${fmt(item.price*item.qty)}</td>
     </tr>`).join('');
-  const html = `<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>報價單 ${escHTML(q.qno)}</title>
+  return `<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>報價單 ${escHTML(q.qno)}</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif;color:#111;background:#fff}
@@ -1025,9 +1015,15 @@ function printQuote() {
         <div class="sig-line">簽名 / 蓋章</div>
       </div>
     </div>
-  </div>
-  <script>window.onload=()=>{window.print();}<\/script>
-  </body></html>`;
+  </div>`;
+}
+
+function printQuote() {
+  const q = getCurrentQuote();
+  if (!q) { toast('請先選擇報價單', 'error'); return; }
+  collectFormData(q);
+  saveQuotes();
+  const html = buildPrintHTML(q) + `<script>window.onload=()=>{window.print();}<\/script></body></html>`;
   const w = window.open('', '_blank');
   w.document.write(html);
   w.document.close();
@@ -1042,26 +1038,35 @@ async function downloadPDF() {
   const btn = document.getElementById('btn-pdf');
   if (btn) { btn.textContent = '⏳ 產生中…'; btn.disabled = true; }
 
+  // 顯示 loading 遮罩，防止使用者看到暫時放在畫面上的 PDF 內容
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(12,13,16,0.92);z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;';
+  overlay.innerHTML = '<div style="font-size:40px">📄</div><div style="color:#ccb38c;font-family:sans-serif;font-size:15px;font-weight:600;letter-spacing:1px">PDF 產生中，請稍候…</div>';
+  document.body.appendChild(overlay);
+
+  // html2canvas 必須在可視範圍內擷取元素，所以放在 top:0 left:0
+  // 遮罩蓋住它，使用者不會看到
+  const container = document.createElement('div');
+  container.style.cssText = 'position:fixed;top:0;left:0;width:794px;background:#fff;z-index:99998;pointer-events:none;';
+
   const { revenue, tax, revenueWithTax } = calcQuoteFinancials(q);
   const itemRows = q.items.map((item, i) => `
     <tr>
-      <td style="text-align:center;vertical-align:top;padding:8px 6px">${i+1}</td>
+      <td style="text-align:center;vertical-align:top;padding:8px 6px;font-size:11px">${i+1}</td>
       <td style="vertical-align:top;padding:8px 6px">
-        <div>${escHTML(item.name)||'—'}</div>
+        <div style="font-size:11px">${escHTML(item.name)||'—'}</div>
         ${item.note ? `<div style="font-size:10px;color:#888;margin-top:4px;white-space:pre-line;line-height:1.5;border-left:2px solid #ddd;padding-left:6px">${escHTML(item.note)}</div>` : ''}
       </td>
-      <td style="text-align:right;vertical-align:top;padding:8px 6px">NT$ ${fmt(item.price)}</td>
-      <td style="text-align:right;vertical-align:top;padding:8px 6px">${item.qty}</td>
-      <td style="vertical-align:top;padding:8px 6px">${escHTML(item.unit)}</td>
-      <td style="text-align:right;vertical-align:top;padding:8px 6px">NT$ ${fmt(item.price*item.qty)}</td>
+      <td style="text-align:right;vertical-align:top;padding:8px 6px;font-size:11px">NT$ ${fmt(item.price)}</td>
+      <td style="text-align:right;vertical-align:top;padding:8px 6px;font-size:11px">${item.qty}</td>
+      <td style="vertical-align:top;padding:8px 6px;font-size:11px">${escHTML(item.unit)}</td>
+      <td style="text-align:right;vertical-align:top;padding:8px 6px;font-size:11px">NT$ ${fmt(item.price*item.qty)}</td>
     </tr>`).join('');
 
-  const container = document.createElement('div');
-  container.style.cssText = 'position:fixed;left:-9999px;top:0;width:794px;background:#fff;padding:0;';
   container.innerHTML = `
   <div style="font-family:'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif;color:#111;background:#fff;padding:36px 44px;width:794px">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px">
-      <div><strong style="display:block;font-size:16px;font-weight:700;letter-spacing:2px;margin-bottom:2px">${COMPANY.name}</strong></div>
+      <strong style="font-size:16px;font-weight:700;letter-spacing:2px">${COMPANY.name}</strong>
       <div style="font-size:24px;font-weight:800;letter-spacing:6px">QUOTATION</div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid #ddd">
@@ -1105,7 +1110,7 @@ async function downloadPDF() {
       </table>
     </div>
     <table style="width:100%;border-collapse:collapse;border:1px solid #ddd;border-top:none">
-      <tbody style="font-size:11px">${itemRows}</tbody>
+      <tbody>${itemRows}</tbody>
     </table>
     <div style="border:1px solid #ddd;border-top:none;padding:8px 16px">
       <div style="display:flex;justify-content:flex-end;gap:40px;font-size:11px;margin-bottom:4px"><span style="color:#888;min-width:80px;text-align:right">小計</span><span style="min-width:100px;text-align:right;font-weight:500">NT$ ${fmt(revenue)}</span></div>
@@ -1128,12 +1133,15 @@ async function downloadPDF() {
 
   document.body.appendChild(container);
 
+  // 等一個 frame 讓 DOM 完全渲染
+  await new Promise(r => setTimeout(r, 120));
+
   try {
     const opt = {
       margin: 0,
       filename: `${q.qno}_${(q.projectName||'報價單').replace(/[\/\\:*?"<>|]/g,'')}.pdf`,
       image: { type: 'jpeg', quality: 0.97 },
-      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', logging: false },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
     await html2pdf().set(opt).from(container).save();
@@ -1143,6 +1151,7 @@ async function downloadPDF() {
     console.error(e);
   } finally {
     document.body.removeChild(container);
+    document.body.removeChild(overlay);
     if (btn) { btn.textContent = '📥 下載 PDF'; btn.disabled = false; }
   }
 }
