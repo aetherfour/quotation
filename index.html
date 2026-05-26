@@ -152,84 +152,78 @@
     .preview-wrap { box-shadow: none; }
   }
 
+  /* 預覽樣式 */
   .preview-wrap {
-    background: #fff; color: #111; max-width: 860px; margin: 0 auto;
-    padding: 40px 48px; box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+    background: #fff; color: #111; width: 800px; margin: 0 auto;
+    padding: 40px 44px; box-shadow: 0 4px 40px rgba(0,0,0,0.5);
     border-radius: 4px; font-family: 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
   }
-  .pv-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; }
-  .pv-brand strong { display: block; font-size: 17px; color: #111; font-weight: 700; letter-spacing: 2px; margin-bottom: 4px; }
-  .pv-title { font-size: 26px; font-weight: 800; letter-spacing: 6px; color: #222; }
-  .pv-sections { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid #ddd; }
-  .pv-section { padding: 14px 18px; }
+  .pv-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+  .pv-brand strong { display: block; font-size: 16px; color: #111; font-weight: 700; letter-spacing: 2px; }
+  .pv-brand span { display: block; font-size: 11px; color: #888; letter-spacing: 1px; margin-top: 3px; }
+  .pv-title { font-size: 24px; font-weight: 800; letter-spacing: 6px; color: #222; }
+  .pv-sections { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #ddd; }
+  .pv-section { padding: 12px 16px; }
   .pv-section:first-child { border-right: 1px solid #ddd; }
-  .pv-section-title { font-size: 9px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-  .pv-field { display: flex; font-size: 12px; margin-bottom: 5px; }
-  .pv-field-label { color: #888; min-width: 60px; flex-shrink: 0; }
+  .pv-section-title { font-size: 9px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 7px; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+  .pv-field { display: flex; font-size: 11px; margin-bottom: 4px; }
+  .pv-field-label { color: #888; min-width: 56px; flex-shrink: 0; }
   .pv-field-val { color: #111; font-weight: 500; flex: 1; white-space: pre-line; }
-  .pv-terms { border: 1px solid #ddd; border-top: none; padding: 12px 18px; }
-  .pv-terms-title { font-size: 9px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 7px; border-bottom: 1px solid #eee; padding-bottom: 4px; }
-  .pv-term { display: flex; font-size: 11px; margin-bottom: 4px; line-height: 1.5; }
-  .pv-term-label { color: #888; min-width: 56px; flex-shrink: 0; }
+  .pv-terms { border: 1px solid #ddd; border-top: none; padding: 10px 16px; }
+  .pv-terms-title { font-size: 9px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+  .pv-term { display: flex; font-size: 10px; margin-bottom: 3px; line-height: 1.5; }
+  .pv-term-label { color: #888; min-width: 52px; flex-shrink: 0; }
   .pv-term-val { color: #333; }
   .pv-items { border: 1px solid #ddd; border-top: none; }
-  .pv-items-header { background: #f5f5f5; display: grid; grid-template-columns: 36px 1fr 85px 55px 55px 85px; font-size: 10px; font-weight: 700; color: #555; padding: 7px 10px; border-bottom: 1px solid #ddd; }
-  .pv-item-row { display: grid; grid-template-columns: 36px 1fr 85px 55px 55px 85px; font-size: 12px; padding: 8px 10px; border-bottom: 1px solid #eee; align-items: start; }
+  .pv-items-header { background: #f5f5f5; display: grid; grid-template-columns: 32px 1fr 80px 52px 52px 80px; font-size: 10px; font-weight: 700; color: #555; padding: 6px 10px; border-bottom: 1px solid #ddd; }
+  .pv-item-row { display: grid; grid-template-columns: 32px 1fr 80px 52px 52px 80px; font-size: 11px; padding: 7px 10px; border-bottom: 1px solid #eee; align-items: start; }
   .pv-item-row:last-child { border-bottom: none; }
   .pv-items-header > *, .pv-item-row > * { padding: 0 3px; }
   .pv-num { text-align: center; }
   .pv-money { text-align: right; }
-  .pv-totals { border: 1px solid #ddd; border-top: none; padding: 10px 18px; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
-  .pv-total-row { display: flex; gap: 32px; font-size: 12px; }
+  .pv-totals { border: 1px solid #ddd; border-top: none; padding: 8px 16px; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .pv-total-row { display: flex; gap: 28px; font-size: 11px; }
   .pv-total-label { color: #888; min-width: 80px; text-align: right; }
-  .pv-total-val { min-width: 100px; text-align: right; font-weight: 500; }
-  .pv-total-row.grand-row { font-size: 14px; font-weight: 700; border-top: 1px solid #ddd; padding-top: 7px; margin-top: 2px; }
+  .pv-total-val { min-width: 90px; text-align: right; font-weight: 500; }
+  .pv-total-row.grand-row { font-size: 13px; font-weight: 700; border-top: 1px solid #ddd; padding-top: 6px; margin-top: 2px; }
   .pv-footer { border: 1px solid #ddd; border-top: none; display: grid; grid-template-columns: 1fr 1fr; }
-  .pv-bank { padding: 14px 18px; border-right: 1px solid #ddd; }
-  .pv-bank-title { font-size: 9px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 7px; }
-  .pv-bank p { font-size: 11px; color: #333; margin-bottom: 3px; }
-  .pv-sig { padding: 14px 18px; display: flex; flex-direction: column; justify-content: flex-end; }
-  .pv-sig-title { font-size: 9px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 32px; }
+  .pv-bank { padding: 12px 16px; border-right: 1px solid #ddd; }
+  .pv-bank-title { font-size: 9px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .pv-bank p { font-size: 11px; color: #333; margin-bottom: 2px; }
+  .pv-sig { padding: 12px 16px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .pv-sig-title { font-size: 9px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 28px; }
   .pv-sig-line { border-top: 1px solid #bbb; padding-top: 5px; font-size: 10px; color: #999; text-align: center; }
-  .pv-section-title-row { font-size: 10px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; padding: 8px 18px 5px; border: 1px solid #ddd; border-top: none; background: #fafafa; }
+  .pv-section-title-row { font-size: 9px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 1px; padding: 7px 16px 4px; border: 1px solid #ddd; border-top: none; background: #fafafa; }
 
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
   .empty-state { text-align: center; padding: 48px 24px; color: var(--muted); }
   .empty-state .icon { font-size: 40px; margin-bottom: 12px; }
-
   .toast { position: fixed; bottom: 24px; right: 24px; background: var(--surface2); border: 1px solid var(--border); padding: 12px 20px; border-radius: 10px; font-size: 13px; z-index: 999; opacity: 0; transform: translateY(10px); transition: all 0.3s; pointer-events: none; }
   .toast.show { opacity: 1; transform: translateY(0); }
   .toast.success { border-color: var(--success); color: var(--success); }
   .toast.error { border-color: var(--danger); color: var(--danger); }
-
   .check-circle { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; }
   .product-card.selected .check-circle { background: var(--success); border-color: var(--success); color: #fff; }
-  .divider { height: 1px; background: var(--border); margin: 16px 0; }
 </style>
 </head>
 <body>
 <div class="app">
   <div class="sidebar">
-    <div class="logo">
-      <h1>以太四象</h1>
-      <p>報價單管理平台</p>
-    </div>
+    <div class="logo"><h1>以太四象</h1><p>報價單管理平台</p></div>
     <div class="nav">
       <div class="nav-section">功能</div>
       <div class="nav-item active" onclick="showPage('editor')" id="nav-editor"><span class="icon">📄</span> 編輯報價單</div>
       <div class="nav-item" onclick="showPage('db')" id="nav-db"><span class="icon">📦</span> 品項資料庫</div>
       <div class="nav-item" onclick="showPage('summary')" id="nav-summary"><span class="icon">📊</span> 匯總報表</div>
     </div>
-    <div class="nav-section" style="padding:8px 16px 4px;">歷史紀錄</div>
+    <div class="nav-section" style="padding:8px 16px 4px">歷史紀錄</div>
     <div class="quote-list" id="quote-list"></div>
     <div class="sidebar-actions">
       <button class="btn btn-primary" style="flex:1" onclick="newQuote()">＋ 新增報價單</button>
     </div>
   </div>
-
   <div class="main">
     <div class="topbar">
       <h2 id="topbar-title">編輯報價單</h2>
@@ -238,190 +232,142 @@
         <button class="tab" onclick="switchTab('profit')" id="tab-profit">利潤結算</button>
         <button class="tab" onclick="switchTab('preview')" id="tab-preview">預覽列印</button>
       </div>
-      <div id="topbar-actions" style="display:flex;gap:8px;"></div>
+      <div id="topbar-actions" style="display:flex;gap:8px"></div>
     </div>
     <div class="content" id="main-content"></div>
   </div>
 </div>
-
 <div class="modal-overlay" id="modal"><div class="modal" id="modal-body"></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
 let quotes = JSON.parse(localStorage.getItem('ether_quotes') || '[]');
 let products = JSON.parse(localStorage.getItem('ether_products') || '[]');
-let currentQuoteId = null;
-let currentPage = 'editor';
-let currentTab = 'form';
+let currentQuoteId = null, currentPage = 'editor', currentTab = 'form';
 
-const COMPANY = {
-  name: '以太四象有限公司',
-  bank: '玉山銀行 (808)', account: '1230940028928', holder: '以太四象有限公司',
-};
-const SALESPERSONS = ['蘇柏屹 Bryan', '黃雨晴 Eden', '王亞昀 Amber'];
+const COMPANY = { name:'以太四象有限公司', bank:'玉山銀行 (808)', account:'1230940028928', holder:'以太四象有限公司' };
+const SALESPERSONS = ['蘇柏屹 Bryan','黃雨晴 Eden','王亞昀 Amber'];
 const TERMS = {
-  confirm: '此報價單具合約效力，本報價單經簽章傳回後，即為正式合作約定，不可要求全額退款。若因個人因素需中止專案，除訂金全額不予退回外，需另外支付已產生之費用。',
-  payment: '專案訂金：回簽報價單時支付40%；專案尾款：活動結束後翌日支付60%。',
-  deadline: '訂金請於收到發票後3日內支付，收到訂金後方可啟動專案。剩餘期數款項請於收到發票後7日內完成匯款支付。若未依約定期程付款，我方有權逕行停止作品之展示與使用，取回產品、設備之所有權。',
-  warranty: '非人損、天災範圍，對報價內容提供保固維護。',
-  extra: '敬請詳閱報價備註欄中所載之注意事項。如報價單中未詳盡之事項，需另訂定合約，雙方需事先議定。',
+  confirm:'此報價單具合約效力，本報價單經簽章傳回後，即為正式合作約定，不可要求全額退款。若因個人因素需中止專案，除訂金全額不予退回外，需另外支付已產生之費用。',
+  payment:'專案訂金：回簽報價單時支付60%；專案尾款：活動結束後翌日支付40%。',
+  deadline:'訂金請於收到發票後3日內支付，收到訂金後方可啟動專案。剩餘期數款項請於收到發票後7日內完成匯款支付。若未依約定期程付款，我方有權逕行停止作品之展示與使用，取回產品、設備之所有權。',
+  warranty:'非人損、天災範圍，對報價內容提供保固維護。',
+  extra:'敬請詳閱報價備註欄中所載之注意事項。如報價單中未詳盡之事項，需另訂定合約，雙方需事先議定。',
 };
 
-if (products.length === 0) {
+if (!products.length) {
   products = [
-    { id: uid(), name: 'LED 顯示幕租賃', price: 15000, cost: 8000, unit: '式', note: '含安裝拆除' },
-    { id: uid(), name: '燈光設備租賃', price: 8000, cost: 4000, unit: '式', note: '' },
-    { id: uid(), name: '音響設備租賃', price: 12000, cost: 6500, unit: '式', note: '' },
-    { id: uid(), name: '互動裝置開發', price: 50000, cost: 28000, unit: '式', note: '依規格報價' },
-    { id: uid(), name: '現場技術人員', price: 3500, cost: 2000, unit: '人/天', note: '' },
-    { id: uid(), name: '活動策劃顧問', price: 20000, cost: 8000, unit: '式', note: '' },
-  ];
-  saveProducts();
+    {id:uid(),name:'LED 顯示幕租賃',price:15000,cost:8000,unit:'式',note:'含安裝拆除'},
+    {id:uid(),name:'燈光設備租賃',price:8000,cost:4000,unit:'式',note:''},
+    {id:uid(),name:'音響設備租賃',price:12000,cost:6500,unit:'式',note:''},
+    {id:uid(),name:'互動裝置開發',price:50000,cost:28000,unit:'式',note:'依規格報價'},
+    {id:uid(),name:'現場技術人員',price:3500,cost:2000,unit:'人/天',note:''},
+    {id:uid(),name:'活動策劃顧問',price:20000,cost:8000,unit:'式',note:''},
+  ]; saveProducts();
 }
 
-function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
-function saveQuotes() { localStorage.setItem('ether_quotes', JSON.stringify(quotes)); }
-function saveProducts() { localStorage.setItem('ether_products', JSON.stringify(products)); }
-function today() { return new Date().toISOString().slice(0,10); }
-function daysLater(n) { const d=new Date(); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
-function nextQno() { const n=quotes.length+1; const y=new Date().getFullYear(); return `QT-${y}-${String(n).padStart(3,'0')}`; }
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6);}
+function saveQuotes(){localStorage.setItem('ether_quotes',JSON.stringify(quotes));}
+function saveProducts(){localStorage.setItem('ether_products',JSON.stringify(products));}
+function today(){return new Date().toISOString().slice(0,10);}
+function daysLater(n){const d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10);}
+function nextQno(){return `QT-${new Date().getFullYear()}-${String(quotes.length+1).padStart(3,'0')}`;}
+function fmt(n){return Number(n||0).toLocaleString('zh-TW');}
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function escHTML(s){return esc(s);}
+function toast(msg,type=''){const el=document.getElementById('toast');el.textContent=msg;el.className='toast show '+type;setTimeout(()=>el.classList.remove('show'),2500);}
 
-function newBlankQuote() {
-  return {
-    id: uid(), qno: nextQno(), date: today(), validDate: daysLater(14),
-    projectName: '', projectNote: '', salesperson: SALESPERSONS[0], salespersonPhone: '',
-    clientName: '', clientContact: '', clientPhone: '', clientAddress: '',
-    items: [{ id: uid(), name: '', price: 0, cost: 0, qty: 1, unit: '式', note: '' }],
-    terms: { ...TERMS }, createdAt: new Date().toISOString(),
-  };
+function newBlankQuote(){
+  return {id:uid(),qno:nextQno(),date:today(),validDate:daysLater(14),
+    projectName:'',projectNote:'',salesperson:SALESPERSONS[0],salespersonPhone:'',
+    clientName:'',clientContact:'',clientPhone:'',clientAddress:'',
+    items:[{id:uid(),name:'',price:0,cost:0,qty:1,unit:'式',note:''}],
+    terms:{...TERMS},createdAt:new Date().toISOString()};
 }
 
-function calcQuoteFinancials(q) {
-  const revenue = q.items.reduce((s,i) => s+(i.price*i.qty||0), 0);
-  const totalCost = q.items.reduce((s,i) => s+((i.cost||0)*i.qty||0), 0);
-  const tax = Math.round(revenue*0.05);
-  const revenueWithTax = revenue+tax;
-  const profit = revenue-totalCost;
-  const margin = revenue>0 ? (profit/revenue*100) : 0;
-  return { revenue, totalCost, tax, revenueWithTax, profit, margin };
+function calcFinancials(q){
+  const revenue=q.items.reduce((s,i)=>s+(i.price*i.qty||0),0);
+  const totalCost=q.items.reduce((s,i)=>s+((i.cost||0)*i.qty||0),0);
+  const tax=Math.round(revenue*0.05);
+  return{revenue,totalCost,tax,revenueWithTax:revenue+tax,profit:revenue-totalCost,margin:revenue>0?(revenue-totalCost)/revenue*100:0};
 }
 
-function showPage(page) {
-  currentPage = page;
-  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+function showPage(page){
+  currentPage=page;
+  document.querySelectorAll('.nav-item').forEach(el=>el.classList.remove('active'));
   document.getElementById('nav-'+page)?.classList.add('active');
-  const tabs = document.getElementById('tabs');
-  const topbarTitle = document.getElementById('topbar-title');
-  const topbarActions = document.getElementById('topbar-actions');
-  if (page === 'editor') {
-    tabs.style.display = 'flex';
-    topbarTitle.textContent = '編輯報價單';
-    topbarActions.innerHTML = `
-      <button class="btn btn-ghost btn-sm" onclick="deleteCurrentQuote()">🗑 刪除</button>
+  const tabs=document.getElementById('tabs'),title=document.getElementById('topbar-title'),actions=document.getElementById('topbar-actions');
+  if(page==='editor'){
+    tabs.style.display='flex'; title.textContent='編輯報價單';
+    actions.innerHTML=`<button class="btn btn-ghost btn-sm" onclick="deleteCurrentQuote()">🗑 刪除</button>
       <button class="btn btn-success btn-sm" onclick="saveCurrentQuote()">💾 儲存</button>
       <button class="btn btn-ghost btn-sm" onclick="printQuote()">🖨 列印</button>
       <button class="btn btn-primary btn-sm" id="btn-pdf" onclick="downloadPDF()">📥 下載 PDF</button>`;
     renderEditor();
-  } else if (page === 'db') {
-    tabs.style.display = 'none';
-    topbarTitle.textContent = '品項資料庫';
-    topbarActions.innerHTML = `<button class="btn btn-primary btn-sm" onclick="openAddProduct()">＋ 新增品項</button>`;
+  } else if(page==='db'){
+    tabs.style.display='none'; title.textContent='品項資料庫';
+    actions.innerHTML=`<button class="btn btn-primary btn-sm" onclick="openAddProduct()">＋ 新增品項</button>`;
     renderDB();
-  } else if (page === 'summary') {
-    tabs.style.display = 'none';
-    topbarTitle.textContent = '匯總報表';
-    topbarActions.innerHTML = '';
-    renderSummary();
+  } else {
+    tabs.style.display='none'; title.textContent='匯總報表'; actions.innerHTML=''; renderSummary();
   }
 }
 
-function switchTab(tab) {
-  currentTab = tab;
-  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+function switchTab(tab){
+  currentTab=tab;
+  document.querySelectorAll('.tab').forEach(el=>el.classList.remove('active'));
   document.getElementById('tab-'+tab).classList.add('active');
-  if (tab==='form') renderEditor();
-  else if (tab==='profit') renderProfit();
+  if(tab==='form') renderEditor();
+  else if(tab==='profit') renderProfit();
   else renderPreview();
 }
 
-function renderQuoteList() {
-  const list = document.getElementById('quote-list');
-  if (quotes.length===0) { list.innerHTML=`<div style="padding:12px 16px;font-size:12px;color:var(--muted)">尚無報價單</div>`; return; }
-  list.innerHTML = [...quotes].reverse().map(q=>`
+function renderQuoteList(){
+  const list=document.getElementById('quote-list');
+  if(!quotes.length){list.innerHTML=`<div style="padding:12px 16px;font-size:12px;color:var(--muted)">尚無報價單</div>`;return;}
+  list.innerHTML=[...quotes].reverse().map(q=>`
     <div class="quote-list-item ${q.id===currentQuoteId?'active':''}" onclick="loadQuote('${q.id}')">
-      <div class="qno">${q.qno}</div>
-      <div class="qname">${q.projectName||'（未命名專案）'}</div>
-      <div class="qdate">${q.date}</div>
+      <div class="qno">${q.qno}</div><div class="qname">${q.projectName||'（未命名專案）'}</div><div class="qdate">${q.date}</div>
     </div>`).join('');
 }
 
-function loadQuote(id) {
-  const q = quotes.find(x=>x.id===id);
-  if (!q) return;
-  currentQuoteId = id; currentTab = 'form';
-  showPage('editor'); renderQuoteList();
+function loadQuote(id){const q=quotes.find(x=>x.id===id);if(!q)return;currentQuoteId=id;currentTab='form';showPage('editor');renderQuoteList();}
+function newQuote(){const q=newBlankQuote();quotes.push(q);saveQuotes();currentQuoteId=q.id;currentTab='form';showPage('editor');renderQuoteList();}
+function saveCurrentQuote(){const q=getCurrentQuote();if(!q)return;collectFormData(q);saveQuotes();renderQuoteList();toast('報價單已儲存 ✓','success');}
+function getCurrentQuote(){return quotes.find(q=>q.id===currentQuoteId);}
+
+function deleteCurrentQuote(){
+  if(!currentQuoteId)return;
+  openModal(`<h3>確認刪除</h3><p style="color:var(--muted);font-size:13px;margin-top:8px">確定要刪除此報價單嗎？</p>
+    <div class="modal-actions"><button class="btn btn-ghost" onclick="closeModal()">取消</button><button class="btn btn-danger" onclick="confirmDelete()">確認刪除</button></div>`);
+}
+function confirmDelete(){
+  quotes=quotes.filter(q=>q.id!==currentQuoteId);saveQuotes();currentQuoteId=null;closeModal();
+  if(quotes.length){currentQuoteId=quotes[quotes.length-1].id;renderQuoteList();renderEditor();}else newQuote();
 }
 
-function newQuote() {
-  const q = newBlankQuote();
-  quotes.push(q); saveQuotes();
-  currentQuoteId = q.id; currentTab = 'form';
-  showPage('editor'); renderQuoteList();
-}
-
-function saveCurrentQuote() {
-  const q = getCurrentQuote(); if (!q) return;
-  collectFormData(q); saveQuotes(); renderQuoteList();
-  toast('報價單已儲存 ✓', 'success');
-}
-
-function deleteCurrentQuote() {
-  if (!currentQuoteId) return;
-  openModal(`<h3>確認刪除</h3><p style="color:var(--muted);font-size:13px;margin-top:8px">確定要刪除此報價單嗎？此動作無法復原。</p>
-    <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="closeModal()">取消</button>
-      <button class="btn btn-danger" onclick="confirmDelete()">確認刪除</button>
-    </div>`);
-}
-function confirmDelete() {
-  quotes = quotes.filter(q=>q.id!==currentQuoteId);
-  saveQuotes(); currentQuoteId=null; closeModal();
-  if (quotes.length>0) { currentQuoteId=quotes[quotes.length-1].id; renderQuoteList(); renderEditor(); }
-  else newQuote();
-}
-
-function getCurrentQuote() { return quotes.find(q=>q.id===currentQuoteId); }
-
-function renderEditor() {
-  const content = document.getElementById('main-content');
-  if (currentTab!=='form') { if (currentTab==='profit') renderProfit(); else renderPreview(); return; }
-  let q = getCurrentQuote();
-  if (!q) { content.innerHTML=`<div class="empty-state"><div class="icon">📄</div><p>請先新增一份報價單</p><button class="btn btn-primary" style="margin-top:16px" onclick="newQuote()">＋ 新增報價單</button></div>`; return; }
-  content.innerHTML = `
-  <div id="editor-pane">
-    <div class="card">
-      <div class="card-header"><div class="card-title">📋 報價資訊</div></div>
+function renderEditor(){
+  const content=document.getElementById('main-content');
+  if(currentTab!=='form'){if(currentTab==='profit')renderProfit();else renderPreview();return;}
+  const q=getCurrentQuote();
+  if(!q){content.innerHTML=`<div class="empty-state"><div class="icon">📄</div><p>請先新增一份報價單</p><button class="btn btn-primary" style="margin-top:16px" onclick="newQuote()">＋ 新增報價單</button></div>`;return;}
+  content.innerHTML=`<div id="editor-pane">
+    <div class="card"><div class="card-header"><div class="card-title">📋 報價資訊</div></div>
       <div class="form-grid">
         <div class="form-group"><label>報價單號</label><input id="f-qno" value="${esc(q.qno)}"></div>
-        <div class="form-group"><label>專案業務</label>
-          <select id="f-salesperson">${SALESPERSONS.map(s=>`<option value="${esc(s)}" ${s===q.salesperson?'selected':''}>${esc(s)}</option>`).join('')}</select>
-        </div>
+        <div class="form-group"><label>專案業務</label><select id="f-salesperson">${SALESPERSONS.map(s=>`<option value="${esc(s)}" ${s===q.salesperson?'selected':''}>${esc(s)}</option>`).join('')}</select></div>
         <div class="form-group"><label>業務電話</label><input id="f-salespersonPhone" value="${esc(q.salespersonPhone||'')}" placeholder="業務聯絡電話"></div>
         <div class="form-group"><label>報價日期</label><input id="f-date" type="date" value="${q.date}"></div>
         <div class="form-group"><label>有效日期</label><input id="f-validDate" type="date" value="${q.validDate}"></div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header"><div class="card-title">🗂 專案資訊</div></div>
+    <div class="card"><div class="card-header"><div class="card-title">🗂 專案資訊</div></div>
       <div class="form-grid">
         <div class="form-group full"><label>專案名稱</label><input id="f-projectName" value="${esc(q.projectName)}" placeholder="請輸入專案名稱"></div>
-        <div class="form-group full"><label>專案備註（執行地點、期間、人次等）</label>
-          <textarea id="f-projectNote" rows="3" placeholder="執行地點：&#10;執行期間：&#10;預估人次：">${esc(q.projectNote)}</textarea>
-        </div>
+        <div class="form-group full"><label>專案備註</label><textarea id="f-projectNote" rows="3" placeholder="執行地點：&#10;執行期間：&#10;預估人次：">${esc(q.projectNote)}</textarea></div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header"><div class="card-title">👤 客戶資訊</div></div>
+    <div class="card"><div class="card-header"><div class="card-title">👤 客戶資訊</div></div>
       <div class="form-grid">
         <div class="form-group"><label>客戶公司名稱</label><input id="f-clientName" value="${esc(q.clientName)}" placeholder="客戶公司名稱"></div>
         <div class="form-group"><label>聯絡人</label><input id="f-clientContact" value="${esc(q.clientContact)}" placeholder="聯絡人姓名"></div>
@@ -429,30 +375,19 @@ function renderEditor() {
         <div class="form-group"><label>地址</label><input id="f-clientAddress" value="${esc(q.clientAddress)}" placeholder="客戶地址"></div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title">💰 報價內容</div>
-        <div style="display:flex;gap:8px">
-          <button class="btn btn-ghost btn-sm" onclick="openProductPicker()">📦 從資料庫選取</button>
-          <button class="btn btn-ghost btn-sm" onclick="addItem()">＋ 新增品項</button>
-        </div>
+    <div class="card"><div class="card-header"><div class="card-title">💰 報價內容</div>
+        <div style="display:flex;gap:8px"><button class="btn btn-ghost btn-sm" onclick="openProductPicker()">📦 從資料庫選取</button><button class="btn btn-ghost btn-sm" onclick="addItem()">＋ 新增品項</button></div>
       </div>
-      <table class="items-table">
-        <thead><tr>
-          <th style="width:36px">#</th><th>內容</th>
-          <th class="num-col">售價 (NT$)</th><th class="num-col">成本 (NT$)</th>
-          <th class="qty-col">數量</th><th class="unit-col">單位</th>
-          <th class="sub-col">小計</th><th class="note-col">備註</th><th class="del-col"></th>
-        </tr></thead>
-        <tbody id="items-body">${q.items.map((item,i)=>renderItemRow(item,i)).join('')}</tbody>
-      </table>
+      <table class="items-table"><thead><tr>
+        <th style="width:36px">#</th><th>內容</th>
+        <th class="num-col">售價 (NT$)</th><th class="num-col">成本 (NT$)</th>
+        <th class="qty-col">數量</th><th class="unit-col">單位</th>
+        <th class="sub-col">小計</th><th class="note-col">備註</th><th class="del-col"></th>
+      </tr></thead>
+      <tbody id="items-body">${q.items.map((item,i)=>renderItemRow(item,i)).join('')}</tbody></table>
       <div class="totals">${renderTotals(q)}</div>
     </div>
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title">📜 報價條款</div>
-        <button class="btn btn-ghost btn-sm" onclick="resetTerms()">↺ 還原預設</button>
-      </div>
+    <div class="card"><div class="card-header"><div class="card-title">📜 報價條款</div><button class="btn btn-ghost btn-sm" onclick="resetTerms()">↺ 還原預設</button></div>
       <div class="form-grid">
         <div class="form-group full"><label>合作確認</label><textarea id="f-t-confirm" rows="3">${esc(q.terms.confirm)}</textarea></div>
         <div class="form-group full"><label>付款方式</label><textarea id="f-t-payment" rows="2">${esc(q.terms.payment)}</textarea></div>
@@ -464,8 +399,7 @@ function renderEditor() {
   </div>`;
 }
 
-function renderItemRow(item, i) {
-  const sub = (item.price*item.qty)||0;
+function renderItemRow(item,i){
   return `<tr id="row-${item.id}">
     <td class="item-no">${i+1}</td>
     <td><input value="${esc(item.name)}" placeholder="品項名稱" oninput="updateItem('${item.id}','name',this.value)"></td>
@@ -473,72 +407,54 @@ function renderItemRow(item, i) {
     <td><input class="num-col" type="number" value="${item.cost||0}" min="0" style="color:var(--muted)" oninput="updateItem('${item.id}','cost',this.value)"></td>
     <td><input class="qty-col" type="number" value="${item.qty}" min="0" oninput="updateItem('${item.id}','qty',this.value)"></td>
     <td><input class="unit-col" value="${esc(item.unit)}" oninput="updateItem('${item.id}','unit',this.value)"></td>
-    <td class="subtotal-val" id="sub-${item.id}">${fmt(sub)}</td>
+    <td class="subtotal-val" id="sub-${item.id}">${fmt(item.price*item.qty||0)}</td>
     <td><input class="note-col" value="${esc(item.note)}" placeholder="備註" oninput="updateItem('${item.id}','note',this.value)"></td>
     <td><button class="btn btn-icon btn-ghost" style="color:var(--danger)" onclick="removeItem('${item.id}')">✕</button></td>
   </tr>`;
 }
 
-function renderTotals(q) {
-  const { revenue, tax, revenueWithTax } = calcQuoteFinancials(q);
-  return `
-    <div class="total-row"><span class="total-label">小計</span><span class="total-val">${fmt(revenue)}</span></div>
+function renderTotals(q){
+  const{revenue,tax,revenueWithTax}=calcFinancials(q);
+  return `<div class="total-row"><span class="total-label">小計</span><span class="total-val">${fmt(revenue)}</span></div>
     <div class="total-row"><span class="total-label">營業稅 (5%)</span><span class="total-val">${fmt(tax)}</span></div>
     <div class="total-row grand"><span class="total-label">總計</span><span class="total-val" style="color:var(--gold)">${fmt(revenueWithTax)}</span></div>`;
 }
 
-function updateItem(id, field, value) {
-  const q = getCurrentQuote(); if (!q) return;
-  const item = q.items.find(i=>i.id===id); if (!item) return;
-  if (['price','cost','qty'].includes(field)) value = parseFloat(value)||0;
-  item[field] = value;
-  const subEl = document.getElementById('sub-'+id);
-  if (subEl) subEl.textContent = fmt((item.price*item.qty)||0);
-  const totalsEl = document.querySelector('.totals');
-  if (totalsEl) totalsEl.innerHTML = renderTotals(q);
+function updateItem(id,field,value){
+  const q=getCurrentQuote();if(!q)return;
+  const item=q.items.find(i=>i.id===id);if(!item)return;
+  if(['price','cost','qty'].includes(field))value=parseFloat(value)||0;
+  item[field]=value;
+  const subEl=document.getElementById('sub-'+id);if(subEl)subEl.textContent=fmt(item.price*item.qty||0);
+  const totalsEl=document.querySelector('.totals');if(totalsEl)totalsEl.innerHTML=renderTotals(q);
 }
-
-function addItem() {
-  const q = getCurrentQuote(); if (!q) return;
-  const item = { id:uid(), name:'', price:0, cost:0, qty:1, unit:'式', note:'' };
-  q.items.push(item);
-  const tbody = document.getElementById('items-body');
-  if (tbody) { tbody.insertAdjacentHTML('beforeend', renderItemRow(item, q.items.length-1)); }
-  const totalsEl = document.querySelector('.totals');
-  if (totalsEl) totalsEl.innerHTML = renderTotals(q);
+function addItem(){
+  const q=getCurrentQuote();if(!q)return;
+  const item={id:uid(),name:'',price:0,cost:0,qty:1,unit:'式',note:''};q.items.push(item);
+  const tbody=document.getElementById('items-body');if(tbody)tbody.insertAdjacentHTML('beforeend',renderItemRow(item,q.items.length-1));
+  const totalsEl=document.querySelector('.totals');if(totalsEl)totalsEl.innerHTML=renderTotals(q);
 }
-
-function removeItem(id) {
-  const q = getCurrentQuote(); if (!q) return;
-  if (q.items.length<=1) { toast('至少需要一個品項','error'); return; }
-  q.items = q.items.filter(i=>i.id!==id);
-  document.getElementById('row-'+id)?.remove();
-  document.querySelectorAll('#items-body tr').forEach((r,i)=>{ const no=r.querySelector('.item-no'); if(no) no.textContent=i+1; });
-  const totalsEl = document.querySelector('.totals');
-  if (totalsEl) totalsEl.innerHTML = renderTotals(q);
+function removeItem(id){
+  const q=getCurrentQuote();if(!q)return;
+  if(q.items.length<=1){toast('至少需要一個品項','error');return;}
+  q.items=q.items.filter(i=>i.id!==id);document.getElementById('row-'+id)?.remove();
+  document.querySelectorAll('#items-body tr').forEach((r,i)=>{const no=r.querySelector('.item-no');if(no)no.textContent=i+1;});
+  const totalsEl=document.querySelector('.totals');if(totalsEl)totalsEl.innerHTML=renderTotals(q);
 }
-
-function collectFormData(q) {
-  const g = id => { const el=document.getElementById(id); return el?el.value:''; };
-  q.qno=g('f-qno'); q.salesperson=g('f-salesperson'); q.salespersonPhone=g('f-salespersonPhone');
-  q.date=g('f-date'); q.validDate=g('f-validDate');
-  q.projectName=g('f-projectName'); q.projectNote=g('f-projectNote');
-  q.clientName=g('f-clientName'); q.clientContact=g('f-clientContact');
-  q.clientPhone=g('f-clientPhone'); q.clientAddress=g('f-clientAddress');
-  q.terms.confirm=g('f-t-confirm'); q.terms.payment=g('f-t-payment');
-  q.terms.deadline=g('f-t-deadline'); q.terms.warranty=g('f-t-warranty'); q.terms.extra=g('f-t-extra');
+function collectFormData(q){
+  const g=id=>{const el=document.getElementById(id);return el?el.value:'';};
+  q.qno=g('f-qno');q.salesperson=g('f-salesperson');q.salespersonPhone=g('f-salespersonPhone');
+  q.date=g('f-date');q.validDate=g('f-validDate');q.projectName=g('f-projectName');q.projectNote=g('f-projectNote');
+  q.clientName=g('f-clientName');q.clientContact=g('f-clientContact');q.clientPhone=g('f-clientPhone');q.clientAddress=g('f-clientAddress');
+  q.terms.confirm=g('f-t-confirm');q.terms.payment=g('f-t-payment');q.terms.deadline=g('f-t-deadline');q.terms.warranty=g('f-t-warranty');q.terms.extra=g('f-t-extra');
 }
+function resetTerms(){['confirm','payment','deadline','warranty','extra'].forEach(k=>{const el=document.getElementById('f-t-'+k);if(el)el.value=TERMS[k];});toast('條款已還原為預設值');}
 
-function resetTerms() {
-  ['confirm','payment','deadline','warranty','extra'].forEach(k=>{ const el=document.getElementById('f-t-'+k); if(el) el.value=TERMS[k]; });
-  toast('條款已還原為預設值');
-}
-
-let pickerSelected = new Set();
-function openProductPicker() {
-  pickerSelected = new Set();
-  const cards = products.map(p=>{
-    const m = p.price>0 ? Math.round((p.price-(p.cost||0))/p.price*100) : 0;
+let pickerSelected=new Set();
+function openProductPicker(){
+  pickerSelected=new Set();
+  const cards=products.map(p=>{
+    const m=p.price>0?Math.round((p.price-(p.cost||0))/p.price*100):0;
     return `<div class="product-card" id="pp-${p.id}" onclick="togglePicker('${p.id}')">
       <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
         <div style="flex:1;min-width:0">
@@ -551,43 +467,27 @@ function openProductPicker() {
           <div class="check-circle" id="chk-${p.id}"></div>
           <span class="chip chip-${m>=40?'green':m>=20?'gold':'red'}" style="font-size:10px">${m}%</span>
         </div>
-      </div>
-    </div>`;
+      </div></div>`;
   }).join('');
   openModal(`<h3>📦 從品項資料庫選取</h3>
     <p style="font-size:12px;color:var(--muted);margin:8px 0 14px">點選品項加入報價單，可多選</p>
     <div class="product-grid" style="max-height:400px;overflow-y:auto">${cards||'<div class="empty-state"><div class="icon">📦</div><p>尚無品項</p></div>'}</div>
-    <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="closeModal()">取消</button>
-      <button class="btn btn-primary" onclick="addSelectedProducts()">加入選取品項</button>
-    </div>`);
+    <div class="modal-actions"><button class="btn btn-ghost" onclick="closeModal()">取消</button><button class="btn btn-primary" onclick="addSelectedProducts()">加入選取品項</button></div>`);
 }
-function togglePicker(id) {
-  if (pickerSelected.has(id)) {
-    pickerSelected.delete(id);
-    document.getElementById('pp-'+id)?.classList.remove('selected');
-    document.getElementById('chk-'+id).textContent='';
-  } else {
-    pickerSelected.add(id);
-    document.getElementById('pp-'+id)?.classList.add('selected');
-    document.getElementById('chk-'+id).textContent='✓';
-  }
+function togglePicker(id){
+  if(pickerSelected.has(id)){pickerSelected.delete(id);document.getElementById('pp-'+id)?.classList.remove('selected');document.getElementById('chk-'+id).textContent='';}
+  else{pickerSelected.add(id);document.getElementById('pp-'+id)?.classList.add('selected');document.getElementById('chk-'+id).textContent='✓';}
 }
-function addSelectedProducts() {
-  const q = getCurrentQuote(); if (!q) return;
-  pickerSelected.forEach(pid=>{
-    const p = products.find(x=>x.id===pid);
-    if (p) q.items.push({ id:uid(), name:p.name, price:p.price, cost:p.cost||0, qty:1, unit:p.unit, note:p.note });
-  });
-  closeModal(); renderEditor();
-  toast(`已加入 ${pickerSelected.size} 個品項 ✓`, 'success');
+function addSelectedProducts(){
+  const q=getCurrentQuote();if(!q)return;
+  pickerSelected.forEach(pid=>{const p=products.find(x=>x.id===pid);if(p)q.items.push({id:uid(),name:p.name,price:p.price,cost:p.cost||0,qty:1,unit:p.unit,note:p.note});});
+  closeModal();renderEditor();toast(`已加入 ${pickerSelected.size} 個品項 ✓`,'success');
 }
 
-function renderDB() {
-  const content = document.getElementById('main-content');
-  const cards = products.map(p=>{
-    const m = p.price>0 ? Math.round((p.price-(p.cost||0))/p.price*100) : 0;
-    const profitAmt = p.price-(p.cost||0);
+function renderDB(){
+  const content=document.getElementById('main-content');
+  const cards=products.map(p=>{
+    const m=p.price>0?Math.round((p.price-(p.cost||0))/p.price*100):0;
     return `<div class="product-card" style="cursor:default">
       <div style="display:flex;align-items:flex-start;justify-content:space-between">
         <div style="flex:1;min-width:0">
@@ -595,7 +495,7 @@ function renderDB() {
           <div style="display:flex;gap:12px;margin-top:6px;flex-wrap:wrap">
             <div><div style="font-size:10px;color:var(--muted);margin-bottom:2px">售價</div><div class="pc-price">NT$ ${fmt(p.price)} / ${esc(p.unit)}</div></div>
             <div><div style="font-size:10px;color:var(--muted);margin-bottom:2px">成本</div><div class="pc-cost">NT$ ${fmt(p.cost||0)}</div></div>
-            <div><div style="font-size:10px;color:var(--muted);margin-bottom:2px">毛利</div><div class="pc-margin">NT$ ${fmt(profitAmt)} <span class="chip chip-${m>=40?'green':m>=20?'gold':'red'}">${m}%</span></div></div>
+            <div><div style="font-size:10px;color:var(--muted);margin-bottom:2px">毛利</div><div class="pc-margin">NT$ ${fmt(p.price-(p.cost||0))} <span class="chip chip-${m>=40?'green':m>=20?'gold':'red'}">${m}%</span></div></div>
           </div>
           ${p.note?`<div style="margin-top:8px;font-size:12px;color:var(--text);white-space:pre-line;line-height:1.5">${esc(p.note)}</div>`:''}
         </div>
@@ -603,113 +503,95 @@ function renderDB() {
           <button class="btn btn-ghost btn-icon btn-sm" onclick="editProduct('${p.id}')">✏️</button>
           <button class="btn btn-ghost btn-icon btn-sm" onclick="deleteProduct('${p.id}')" style="color:var(--danger)">✕</button>
         </div>
-      </div>
-    </div>`;
+      </div></div>`;
   }).join('');
-  content.innerHTML = `<div class="card">
-    <div class="card-header"><div class="card-title">📦 品項資料庫 <span class="badge">${products.length} 項</span></div></div>
+  content.innerHTML=`<div class="card"><div class="card-header"><div class="card-title">📦 品項資料庫 <span class="badge">${products.length} 項</span></div></div>
     <p style="font-size:12px;color:var(--muted);margin-bottom:16px">管理常用品項及成本，報價單產出時僅顯示售價。</p>
-    ${products.length===0?`<div class="empty-state"><div class="icon">📦</div><p>尚無品項</p></div>`:`<div class="product-grid">${cards}</div>`}
-  </div>`;
+    ${products.length?`<div class="product-grid">${cards}</div>`:`<div class="empty-state"><div class="icon">📦</div><p>尚無品項</p></div>`}</div>`;
 }
 
-function openAddProduct(id) {
-  const p = id ? products.find(x=>x.id===id) : null;
+function openAddProduct(id){
+  const p=id?products.find(x=>x.id===id):null;
   openModal(`<h3>${p?'編輯品項':'新增品項'}</h3>
     <div style="display:flex;flex-direction:column;gap:12px;margin-top:14px">
       <div class="form-group"><label>品項名稱 *</label><input id="mp-name" value="${esc(p?.name||'')}" placeholder="例：LED 顯示幕租賃"></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
-        <div class="form-group"><label>售價 (NT$) *</label><input id="mp-price" type="number" value="${p?.price||0}" min="0"></div>
+        <div class="form-group"><label>售價 (NT$)</label><input id="mp-price" type="number" value="${p?.price||0}" min="0"></div>
         <div class="form-group"><label>成本 (NT$)</label><input id="mp-cost" type="number" value="${p?.cost||0}" min="0"></div>
         <div class="form-group"><label>單位</label><input id="mp-unit" value="${esc(p?.unit||'式')}"></div>
       </div>
       <div id="mp-margin-preview" style="background:var(--surface2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--muted)">填入售價與成本後自動計算毛利率</div>
-      <div class="form-group"><label>備註（可換行分項）</label><textarea id="mp-note" rows="4" placeholder="1. 第一項說明&#10;2. 第二項說明">${esc(p?.note||'')}</textarea></div>
+      <div class="form-group"><label>備註</label><textarea id="mp-note" rows="3" placeholder="1. 第一項&#10;2. 第二項">${esc(p?.note||'')}</textarea></div>
     </div>
-    <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="closeModal()">取消</button>
-      <button class="btn btn-primary" onclick="saveProduct('${id||''}')">${p?'儲存變更':'新增'}</button>
-    </div>`);
+    <div class="modal-actions"><button class="btn btn-ghost" onclick="closeModal()">取消</button><button class="btn btn-primary" onclick="saveProduct('${id||''}')">${p?'儲存變更':'新增'}</button></div>`);
   setTimeout(()=>{
-    const upd = ()=>{
-      const price=parseFloat(document.getElementById('mp-price')?.value)||0;
-      const cost=parseFloat(document.getElementById('mp-cost')?.value)||0;
-      const profit=price-cost; const m=price>0?Math.round(profit/price*100):0;
+    const upd=()=>{
+      const pr=parseFloat(document.getElementById('mp-price')?.value)||0;
+      const co=parseFloat(document.getElementById('mp-cost')?.value)||0;
+      const profit=pr-co;const m=pr>0?Math.round(profit/pr*100):0;
       const el=document.getElementById('mp-margin-preview');
-      if(el) el.innerHTML=`毛利 <strong style="color:${profit>=0?'var(--success)':'var(--danger)'}">NT$ ${fmt(profit)}</strong>　毛利率 <strong style="color:${m>=30?'var(--success)':m>=15?'var(--gold)':'var(--danger)'}">${m}%</strong>`;
+      if(el)el.innerHTML=`毛利 <strong style="color:${profit>=0?'var(--success)':'var(--danger)'}">NT$ ${fmt(profit)}</strong>　毛利率 <strong style="color:${m>=30?'var(--success)':m>=15?'var(--gold)':'var(--danger)'}">${m}%</strong>`;
     };
     document.getElementById('mp-price')?.addEventListener('input',upd);
     document.getElementById('mp-cost')?.addEventListener('input',upd);
-    if(p) upd();
+    if(p)upd();
   },0);
 }
-function editProduct(id) { openAddProduct(id); }
-function saveProduct(id) {
-  const name=document.getElementById('mp-name')?.value.trim();
-  if(!name){toast('請輸入品項名稱','error');return;}
+function editProduct(id){openAddProduct(id);}
+function saveProduct(id){
+  const name=document.getElementById('mp-name')?.value.trim();if(!name){toast('請輸入品項名稱','error');return;}
   const price=parseFloat(document.getElementById('mp-price')?.value)||0;
   const cost=parseFloat(document.getElementById('mp-cost')?.value)||0;
   const unit=document.getElementById('mp-unit')?.value.trim()||'式';
   const note=document.getElementById('mp-note')?.value.trim()||'';
   if(id){const p=products.find(x=>x.id===id);if(p)Object.assign(p,{name,price,cost,unit,note});}
   else products.push({id:uid(),name,price,cost,unit,note});
-  saveProducts(); closeModal(); renderDB(); toast('品項已儲存 ✓','success');
+  saveProducts();closeModal();renderDB();toast('品項已儲存 ✓','success');
 }
-function deleteProduct(id) { products=products.filter(p=>p.id!==id); saveProducts(); renderDB(); toast('品項已刪除'); }
+function deleteProduct(id){products=products.filter(p=>p.id!==id);saveProducts();renderDB();toast('品項已刪除');}
 
-function renderProfit() {
-  const content = document.getElementById('main-content');
-  const q = getCurrentQuote();
-  if (!q) { content.innerHTML='<div class="empty-state"><div class="icon">📊</div><p>請先選擇或建立報價單</p></div>'; return; }
+function renderProfit(){
+  const content=document.getElementById('main-content');const q=getCurrentQuote();
+  if(!q){content.innerHTML='<div class="empty-state"><div class="icon">📊</div><p>請先選擇報價單</p></div>';return;}
   collectFormData(q);
-  const { revenue, totalCost, tax, revenueWithTax, profit, margin } = calcQuoteFinancials(q);
-  const rows = q.items.map((item,i)=>{
-    const rev=item.price*item.qty; const cost=(item.cost||0)*item.qty;
-    const p=rev-cost; const m=rev>0?Math.round(p/rev*100):0;
-    return `<tr>
-      <td>${i+1}. ${esc(item.name)||'（未命名）'}<br><span style="font-size:11px;color:var(--muted)">${esc(item.unit)} × ${item.qty}</span></td>
+  const{revenue,totalCost,tax,revenueWithTax,profit,margin}=calcFinancials(q);
+  const rows=q.items.map((item,i)=>{
+    const rev=item.price*item.qty;const cost=(item.cost||0)*item.qty;const p=rev-cost;const m=rev>0?Math.round(p/rev*100):0;
+    return `<tr><td>${i+1}. ${esc(item.name)||'—'}<br><span style="font-size:11px;color:var(--muted)">${esc(item.unit)} × ${item.qty}</span></td>
       <td class="pt-rev">NT$ ${fmt(rev)}</td><td class="pt-cost">NT$ ${fmt(cost)}</td>
       <td class="${p>=0?'pt-profit-pos':'pt-profit-neg'}">NT$ ${fmt(p)}</td>
-      <td><span class="chip chip-${m>=40?'green':m>=20?'gold':'red'}">${m}%</span></td>
-    </tr>`;
+      <td><span class="chip chip-${m>=40?'green':m>=20?'gold':'red'}">${m}%</span></td></tr>`;
   }).join('');
-  const mc = margin>=40?'green':margin>=20?'gold':'red';
-  content.innerHTML = `<div class="card">
-    <div class="card-header">
-      <div class="card-title">📊 利潤結算 — ${esc(q.projectName)||'（未命名）'}</div>
-      <div style="font-size:12px;color:var(--muted)">${q.qno} · ${q.date}</div>
-    </div>
+  const mc=margin>=40?'green':margin>=20?'gold':'red';
+  content.innerHTML=`<div class="card">
+    <div class="card-header"><div class="card-title">📊 利潤結算 — ${esc(q.projectName)||'（未命名）'}</div><div style="font-size:12px;color:var(--muted)">${q.qno} · ${q.date}</div></div>
     <div class="profit-kpi-grid">
       <div class="kpi-card"><div class="kpi-label">總售價（未稅）</div><div class="kpi-val gold">NT$ ${fmt(revenue)}</div></div>
       <div class="kpi-card"><div class="kpi-label">總成本</div><div class="kpi-val white">NT$ ${fmt(totalCost)}</div></div>
       <div class="kpi-card"><div class="kpi-label">毛利</div><div class="kpi-val ${profit>=0?'green':'red'}">NT$ ${fmt(profit)}</div></div>
       <div class="kpi-card"><div class="kpi-label">毛利率</div><div class="kpi-val ${mc}">${margin.toFixed(1)}%</div></div>
     </div>
-    <table class="profit-table">
-      <thead><tr><th>品項</th><th>售價小計</th><th>成本小計</th><th>毛利</th><th>毛利率</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>
+    <table class="profit-table"><thead><tr><th>品項</th><th>售價小計</th><th>成本小計</th><th>毛利</th><th>毛利率</th></tr></thead><tbody>${rows}</tbody></table>
     <div style="margin-top:16px;border-top:1px solid var(--border);padding-top:16px;display:flex;flex-direction:column;align-items:flex-end;gap:8px">
       <div class="total-row"><span class="total-label">總售價（未稅）</span><span class="total-val">${fmt(revenue)}</span></div>
       <div class="total-row"><span class="total-label">營業稅 (5%)</span><span class="total-val">${fmt(tax)}</span></div>
       <div class="total-row"><span class="total-label">含稅總額</span><span class="total-val">${fmt(revenueWithTax)}</span></div>
-      <div class="total-row"><span class="total-label" style="color:var(--muted)">總成本</span><span class="total-val" style="color:var(--muted)">− ${fmt(totalCost)}</span></div>
       <div class="total-row grand"><span class="total-label">毛利</span><span class="total-val" style="color:${profit>=0?'var(--success)':'var(--danger)'}">NT$ ${fmt(profit)}</span></div>
     </div>
-    <p style="font-size:11px;color:var(--muted);margin-top:12px">＊ 毛利以未稅售價計算。此頁面僅供內部參考，不會出現在客戶報價單中。</p>
+    <p style="font-size:11px;color:var(--muted);margin-top:12px">＊ 此頁面僅供內部參考，不會出現在客戶報價單中。</p>
   </div>`;
 }
 
-function renderSummary() {
-  const content = document.getElementById('main-content');
-  if (quotes.length===0) { content.innerHTML=`<div class="empty-state"><div class="icon">📊</div><p>尚無報價單紀錄</p><button class="btn btn-primary" style="margin-top:16px" onclick="newQuote()">＋ 新增第一份報價單</button></div>`; return; }
-  const sorted = [...quotes].sort((a,b)=>b.date.localeCompare(a.date));
-  let totalRevAll=0, totalCostAll=0;
-  const maxRev = Math.max(...sorted.map(q=>calcQuoteFinancials(q).revenue),1);
-  const rows = sorted.map(q=>{
-    const { revenue, totalCost, revenueWithTax, profit, margin } = calcQuoteFinancials(q);
-    totalRevAll+=revenue; totalCostAll+=totalCost;
-    const barW=Math.round(revenue/maxRev*100); const mc=margin>=40?'green':margin>=20?'gold':'red';
+function renderSummary(){
+  const content=document.getElementById('main-content');
+  if(!quotes.length){content.innerHTML=`<div class="empty-state"><div class="icon">📊</div><p>尚無報價單紀錄</p><button class="btn btn-primary" style="margin-top:16px" onclick="newQuote()">＋ 新增第一份報價單</button></div>`;return;}
+  const sorted=[...quotes].sort((a,b)=>b.date.localeCompare(a.date));
+  let totalRevAll=0,totalCostAll=0;
+  const maxRev=Math.max(...sorted.map(q=>calcFinancials(q).revenue),1);
+  const rows=sorted.map(q=>{
+    const{revenue,totalCost,revenueWithTax,profit,margin}=calcFinancials(q);
+    totalRevAll+=revenue;totalCostAll+=totalCost;
+    const barW=Math.round(revenue/maxRev*100);const mc=margin>=40?'green':margin>=20?'gold':'red';
     return `<tr style="cursor:pointer" onclick="loadQuote('${q.id}')">
       <td><span style="color:var(--accent2);font-weight:600;font-size:12px">${esc(q.qno)}</span></td>
       <td><div style="font-weight:500">${esc(q.projectName)||'（未命名）'}</div><div style="font-size:11px;color:var(--muted);margin-top:2px">${esc(q.clientName)||'—'}</div></td>
@@ -721,9 +603,8 @@ function renderSummary() {
       <td class="r"><span class="chip chip-${mc}">${margin.toFixed(1)}%</span></td>
     </tr>`;
   }).join('');
-  const totalProfit=totalRevAll-totalCostAll;
-  const totalMargin=totalRevAll>0?(totalProfit/totalRevAll*100):0;
-  content.innerHTML = `<div class="card">
+  const totalProfit=totalRevAll-totalCostAll;const totalMargin=totalRevAll>0?totalProfit/totalRevAll*100:0;
+  content.innerHTML=`<div class="card">
     <div class="card-header"><div class="card-title">📊 歷史報價單匯總 <span class="badge">${quotes.length} 份</span></div></div>
     <div class="profit-kpi-grid" style="margin-bottom:20px">
       <div class="kpi-card"><div class="kpi-label">總報價金額（含稅）</div><div class="kpi-val gold">NT$ ${fmt(totalRevAll+Math.round(totalRevAll*0.05))}</div></div>
@@ -732,125 +613,101 @@ function renderSummary() {
       <div class="kpi-card"><div class="kpi-label">平均毛利率</div><div class="kpi-val ${totalMargin>=40?'green':totalMargin>=20?'gold':'red'}">${totalMargin.toFixed(1)}%</div></div>
     </div>
     <div style="border-radius:10px;border:1px solid var(--border);overflow:hidden">
-      <table class="summary-table">
-        <thead><tr><th>報價單號</th><th>專案 / 客戶</th><th>日期</th><th>業務</th><th class="r">含稅金額</th><th class="r">總成本</th><th class="r">毛利</th><th class="r">毛利率</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
+      <table class="summary-table"><thead><tr><th>報價單號</th><th>專案 / 客戶</th><th>日期</th><th>業務</th><th class="r">含稅金額</th><th class="r">總成本</th><th class="r">毛利</th><th class="r">毛利率</th></tr></thead><tbody>${rows}</tbody></table>
     </div>
     <p style="font-size:11px;color:var(--muted);margin-top:12px">點擊任一列可切換至該報價單進行編輯。</p>
   </div>`;
 }
 
-function renderPreview() {
-  const content = document.getElementById('main-content');
-  const q = getCurrentQuote();
-  if (!q) { content.innerHTML='<div class="empty-state"><div class="icon">📄</div><p>請先選擇或建立報價單</p></div>'; return; }
-  collectFormData(q);
-  const { revenue, tax, revenueWithTax } = calcQuoteFinancials(q);
-  const itemRows = q.items.map((item,i)=>`
+function buildPreviewHTML(q){
+  const{revenue,tax,revenueWithTax}=calcFinancials(q);
+  const itemRows=q.items.map((item,i)=>`
     <div class="pv-item-row">
-      <div class="pv-num" style="padding-top:2px">${i+1}</div>
-      <div>
-        <div>${esc(item.name)||'—'}</div>
-        ${item.note?`<div style="font-size:10px;color:#888;margin-top:4px;white-space:pre-line;line-height:1.5;border-left:2px solid #ddd;padding-left:6px">${esc(item.note)}</div>`:''}
-      </div>
+      <div class="pv-num">${i+1}</div>
+      <div><div>${esc(item.name)||'—'}</div>${item.note?`<div style="font-size:10px;color:#888;margin-top:3px;white-space:pre-line;line-height:1.5;border-left:2px solid #ddd;padding-left:5px">${esc(item.note)}</div>`:''}</div>
       <div class="pv-money">NT$ ${fmt(item.price)}</div>
       <div class="pv-money">${item.qty}</div>
       <div>${esc(item.unit)}</div>
       <div class="pv-money">NT$ ${fmt(item.price*item.qty)}</div>
     </div>`).join('');
-
-  content.innerHTML = `
-  <div id="preview-pane" style="display:block;padding-bottom:40px">
-    <div class="preview-wrap" id="pdf-target">
-      <div class="pv-header">
-        <div class="pv-brand"><strong>${COMPANY.name}</strong></div>
-        <div class="pv-title">QUOTATION</div>
+  return `<div class="preview-wrap" id="pdf-target">
+    <div class="pv-header"><div class="pv-brand"><strong>${COMPANY.name}</strong><span>Aether Four Studio</span></div><div class="pv-title">QUOTATION</div></div>
+    <div class="pv-sections">
+      <div class="pv-section">
+        <div class="pv-section-title">專案資訊</div>
+        <div class="pv-field"><span class="pv-field-label">專案名稱｜</span><span class="pv-field-val">${esc(q.projectName)||'—'}</span></div>
+        <div class="pv-field"><span class="pv-field-label">專案備註｜</span><span class="pv-field-val" style="white-space:pre-line">${esc(q.projectNote)||'—'}</span></div>
+        <div style="margin-top:10px" class="pv-section-title">客戶資訊</div>
+        <div class="pv-field" style="margin-top:5px"><span class="pv-field-label">公司名稱｜</span><span class="pv-field-val">${esc(q.clientName)||'—'}</span></div>
+        <div class="pv-field"><span class="pv-field-label">聯絡人　｜</span><span class="pv-field-val">${esc(q.clientContact)||'—'}</span></div>
+        <div class="pv-field"><span class="pv-field-label">電　　話｜</span><span class="pv-field-val">${esc(q.clientPhone||'')||'—'}</span></div>
+        <div class="pv-field"><span class="pv-field-label">地　　址｜</span><span class="pv-field-val">${esc(q.clientAddress)||'—'}</span></div>
       </div>
-      <div class="pv-sections">
-        <div class="pv-section">
-          <div class="pv-section-title">專案資訊</div>
-          <div class="pv-field"><span class="pv-field-label">專案名稱｜</span><span class="pv-field-val">${esc(q.projectName)||'—'}</span></div>
-          <div class="pv-field"><span class="pv-field-label">專案備註｜</span><span class="pv-field-val" style="white-space:pre-line">${esc(q.projectNote)||'—'}</span></div>
-          <div style="margin-top:12px" class="pv-section-title">客戶資訊</div>
-          <div class="pv-field" style="margin-top:6px"><span class="pv-field-label">公司名稱｜</span><span class="pv-field-val">${esc(q.clientName)||'—'}</span></div>
-          <div class="pv-field"><span class="pv-field-label">聯絡人　｜</span><span class="pv-field-val">${esc(q.clientContact)||'—'}</span></div>
-          <div class="pv-field"><span class="pv-field-label">電　　話｜</span><span class="pv-field-val">${esc(q.clientPhone||'')||'—'}</span></div>
-          <div class="pv-field"><span class="pv-field-label">地　　址｜</span><span class="pv-field-val">${esc(q.clientAddress)||'—'}</span></div>
-        </div>
-        <div class="pv-section">
-          <div class="pv-section-title">報價資訊</div>
-          <div class="pv-field"><span class="pv-field-label">報價單號｜</span><span class="pv-field-val">${esc(q.qno)}</span></div>
-          <div class="pv-field"><span class="pv-field-label">報價日期｜</span><span class="pv-field-val">${q.date}</span></div>
-          <div class="pv-field"><span class="pv-field-label">有效日期｜</span><span class="pv-field-val">${q.validDate}</span></div>
-          <div class="pv-field"><span class="pv-field-label">專案業務｜</span><span class="pv-field-val">${esc(q.salesperson)}</span></div>
-          <div class="pv-field"><span class="pv-field-label">聯絡電話｜</span><span class="pv-field-val">${esc(q.salespersonPhone||'—')}</span></div>
-        </div>
+      <div class="pv-section">
+        <div class="pv-section-title">報價資訊</div>
+        <div class="pv-field"><span class="pv-field-label">報價單號｜</span><span class="pv-field-val">${esc(q.qno)}</span></div>
+        <div class="pv-field"><span class="pv-field-label">報價日期｜</span><span class="pv-field-val">${q.date}</span></div>
+        <div class="pv-field"><span class="pv-field-label">有效日期｜</span><span class="pv-field-val">${q.validDate}</span></div>
+        <div class="pv-field"><span class="pv-field-label">專案業務｜</span><span class="pv-field-val">${esc(q.salesperson)}</span></div>
+        <div class="pv-field"><span class="pv-field-label">聯絡電話｜</span><span class="pv-field-val">${esc(q.salespersonPhone||'—')}</span></div>
       </div>
-      <div class="pv-terms">
-        <div class="pv-terms-title">報價條款</div>
-        <div class="pv-term"><span class="pv-term-label">合作確認｜</span><span class="pv-term-val">${esc(q.terms.confirm)}</span></div>
-        <div class="pv-term"><span class="pv-term-label">付款方式｜</span><span class="pv-term-val">${esc(q.terms.payment)}</span></div>
-        <div class="pv-term"><span class="pv-term-label">付款期限｜</span><span class="pv-term-val">${esc(q.terms.deadline)}</span></div>
-        <div class="pv-term"><span class="pv-term-label">保固範圍｜</span><span class="pv-term-val">${esc(q.terms.warranty)}</span></div>
-        <div class="pv-term"><span class="pv-term-label">補充條款｜</span><span class="pv-term-val">${esc(q.terms.extra)}</span></div>
-      </div>
-      <div class="pv-section-title-row">報價內容</div>
-      <div class="pv-items">
-        <div class="pv-items-header">
-          <div class="pv-num">#</div><div>內容</div><div class="pv-money">單價</div>
-          <div class="pv-money">數量</div><div>單位</div><div class="pv-money">小計</div>
-        </div>
-        ${itemRows}
-      </div>
-      <div class="pv-totals">
-        <div class="pv-total-row"><span class="pv-total-label">小計</span><span class="pv-total-val">NT$ ${fmt(revenue)}</span></div>
-        <div class="pv-total-row"><span class="pv-total-label">營業稅 (5%)</span><span class="pv-total-val">NT$ ${fmt(tax)}</span></div>
-        <div class="pv-total-row grand-row"><span class="pv-total-label">總計</span><span class="pv-total-val">NT$ ${fmt(revenueWithTax)}</span></div>
-      </div>
-      <div class="pv-footer">
-        <div class="pv-bank">
-          <div class="pv-bank-title">匯款帳戶</div>
-          <p>${COMPANY.bank}</p><p>帳號：${COMPANY.account}</p><p>戶名：${COMPANY.holder}</p>
-        </div>
-        <div class="pv-sig">
-          <div class="pv-sig-title">客戶簽章</div>
-          <div class="pv-sig-line">簽名 / 蓋章</div>
-        </div>
-      </div>
+    </div>
+    <div class="pv-terms">
+      <div class="pv-terms-title">報價條款</div>
+      <div class="pv-term"><span class="pv-term-label">合作確認｜</span><span class="pv-term-val">${esc(q.terms.confirm)}</span></div>
+      <div class="pv-term"><span class="pv-term-label">付款方式｜</span><span class="pv-term-val">${esc(q.terms.payment)}</span></div>
+      <div class="pv-term"><span class="pv-term-label">付款期限｜</span><span class="pv-term-val">${esc(q.terms.deadline)}</span></div>
+      <div class="pv-term"><span class="pv-term-label">保固範圍｜</span><span class="pv-term-val">${esc(q.terms.warranty)}</span></div>
+      <div class="pv-term"><span class="pv-term-label">補充條款｜</span><span class="pv-term-val">${esc(q.terms.extra)}</span></div>
+    </div>
+    <div class="pv-section-title-row">報價內容</div>
+    <div class="pv-items">
+      <div class="pv-items-header"><div class="pv-num">#</div><div>內容</div><div class="pv-money">單價</div><div class="pv-money">數量</div><div>單位</div><div class="pv-money">小計</div></div>
+      ${itemRows}
+    </div>
+    <div class="pv-totals">
+      <div class="pv-total-row"><span class="pv-total-label">小計</span><span class="pv-total-val">NT$ ${fmt(revenue)}</span></div>
+      <div class="pv-total-row"><span class="pv-total-label">營業稅 (5%)</span><span class="pv-total-val">NT$ ${fmt(tax)}</span></div>
+      <div class="pv-total-row grand-row"><span class="pv-total-label">總計</span><span class="pv-total-val">NT$ ${fmt(revenueWithTax)}</span></div>
+    </div>
+    <div class="pv-footer">
+      <div class="pv-bank"><div class="pv-bank-title">匯款帳戶</div><p>${COMPANY.bank}</p><p>帳號：${COMPANY.account}</p><p>戶名：${COMPANY.holder}</p></div>
+      <div class="pv-sig"><div class="pv-sig-title">客戶簽章</div><div class="pv-sig-line">簽名 / 蓋章</div></div>
     </div>
   </div>`;
 }
 
-function printQuote() {
-  const q = getCurrentQuote();
-  if (!q) { toast('請先選擇報價單','error'); return; }
-  collectFormData(q); saveQuotes();
-  const { revenue, tax, revenueWithTax } = calcQuoteFinancials(q);
-  const itemRows = q.items.map((item,i)=>`
-    <tr>
-      <td style="text-align:center;vertical-align:top;padding-top:10px">${i+1}</td>
-      <td style="vertical-align:top">
-        <div>${escHTML(item.name)||'—'}</div>
-        ${item.note?`<div style="font-size:11px;color:#888;margin-top:5px;white-space:pre-line;line-height:1.6;border-left:2px solid #ddd;padding-left:8px">${escHTML(item.note)}</div>`:''}
-      </td>
-      <td style="text-align:right;vertical-align:top">NT$ ${fmt(item.price)}</td>
-      <td style="text-align:right;vertical-align:top">${item.qty}</td>
-      <td style="vertical-align:top">${escHTML(item.unit)}</td>
-      <td style="text-align:right;vertical-align:top">NT$ ${fmt(item.price*item.qty)}</td>
-    </tr>`).join('');
+function renderPreview(){
+  const content=document.getElementById('main-content');
+  const q=getCurrentQuote();
+  if(!q){content.innerHTML='<div class="empty-state"><div class="icon">📄</div><p>請先選擇或建立報價單</p></div>';return;}
+  collectFormData(q);
+  content.innerHTML=`<div id="preview-pane" style="display:block;padding-bottom:40px">${buildPreviewHTML(q)}</div>`;
+}
+
+function printQuote(){
+  const q=getCurrentQuote();if(!q){toast('請先選擇報價單','error');return;}
+  collectFormData(q);saveQuotes();
+  const{revenue,tax,revenueWithTax}=calcFinancials(q);
+  const itemRows=q.items.map((item,i)=>`<tr>
+    <td style="text-align:center;vertical-align:top;padding-top:10px">${i+1}</td>
+    <td style="vertical-align:top"><div>${escHTML(item.name)||'—'}</div>${item.note?`<div style="font-size:11px;color:#888;margin-top:5px;white-space:pre-line;line-height:1.6;border-left:2px solid #ddd;padding-left:8px">${escHTML(item.note)}</div>`:''}</td>
+    <td style="text-align:right;vertical-align:top">NT$ ${fmt(item.price)}</td>
+    <td style="text-align:right;vertical-align:top">${item.qty}</td>
+    <td style="vertical-align:top">${escHTML(item.unit)}</td>
+    <td style="text-align:right;vertical-align:top">NT$ ${fmt(item.price*item.qty)}</td>
+  </tr>`).join('');
   const html=`<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>${escHTML(q.qno)}</title>
   <style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif;color:#111;background:#fff}
   .wrap{max-width:900px;margin:0 auto;padding:40px 48px}.hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
-  .brand strong{display:block;font-size:17px;font-weight:700;letter-spacing:2px;margin-bottom:3px}.title{font-size:26px;font-weight:800;letter-spacing:6px}
+  .brand strong{display:block;font-size:17px;font-weight:700;letter-spacing:2px}.brand span{display:block;font-size:11px;color:#888;letter-spacing:1px;margin-top:3px}.title{font-size:26px;font-weight:800;letter-spacing:6px}
   .sections{display:grid;grid-template-columns:1fr 1fr;border:1px solid #ddd}.sec{padding:14px 18px}.sec:first-child{border-right:1px solid #ddd}
   .sec-title{font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #eee;padding-bottom:5px;margin-bottom:8px}
   .field{display:flex;font-size:12px;margin-bottom:5px}.fl{color:#888;min-width:64px;flex-shrink:0}.fv{font-weight:500;white-space:pre-line}
   .terms-box{border:1px solid #ddd;border-top:none;padding:12px 18px}.term{display:flex;font-size:11px;margin-bottom:4px;line-height:1.5}
   .tl{color:#888;min-width:56px;flex-shrink:0}.tv{color:#333}
-  .items-header{border:1px solid #ddd;border-top:none;background:#f5f5f5;font-size:10px;font-weight:700}
-  .items-header th,table.items td{padding:7px 10px}table.items{border:1px solid #ddd;border-top:none;width:100%;border-collapse:collapse}
-  table.items td{font-size:12px;border-bottom:1px solid #eee}
+  .items-header{border:1px solid #ddd;border-top:none;background:#f5f5f5}.items-header th{padding:7px 10px;font-size:10px;font-weight:700}
+  table.items{border:1px solid #ddd;border-top:none;width:100%;border-collapse:collapse}table.items td{font-size:12px;border-bottom:1px solid #eee;padding:7px 10px}
   .totals{border:1px solid #ddd;border-top:none;padding:10px 18px}.tr{display:flex;justify-content:flex-end;gap:40px;font-size:12px;margin-bottom:5px}
   .tl2{color:#888;min-width:80px;text-align:right}.tv2{min-width:100px;text-align:right;font-weight:500}
   .tr.grand{font-size:14px;font-weight:700;border-top:1px solid #ddd;padding-top:8px;margin-top:4px}
@@ -858,10 +715,9 @@ function printQuote() {
   .bank{padding:14px 18px;border-right:1px solid #ddd}.bank p{font-size:12px;margin-bottom:3px}.sig{padding:14px 18px}
   .sig-line{margin-top:36px;border-top:1px solid #bbb;padding-top:6px;font-size:11px;color:#999;text-align:center}
   @media print{@page{margin:1cm}}</style></head><body><div class="wrap">
-  <div class="hdr"><div class="brand"><strong>${COMPANY.name}</strong></div><div class="title">QUOTATION</div></div>
+  <div class="hdr"><div class="brand"><strong>${COMPANY.name}</strong><span>Aether Four Studio</span></div><div class="title">QUOTATION</div></div>
   <div class="sections">
-    <div class="sec">
-      <div class="sec-title">專案資訊</div>
+    <div class="sec"><div class="sec-title">專案資訊</div>
       <div class="field"><span class="fl">專案名稱｜</span><span class="fv">${escHTML(q.projectName)||'—'}</span></div>
       <div class="field"><span class="fl">專案備註｜</span><span class="fv" style="white-space:pre-line">${escHTML(q.projectNote)||'—'}</span></div>
       <div class="sec-title" style="margin-top:12px">客戶資訊</div>
@@ -870,8 +726,7 @@ function printQuote() {
       <div class="field"><span class="fl">電　　話｜</span><span class="fv">${escHTML(q.clientPhone||'')||'—'}</span></div>
       <div class="field"><span class="fl">地　　址｜</span><span class="fv">${escHTML(q.clientAddress)||'—'}</span></div>
     </div>
-    <div class="sec">
-      <div class="sec-title">報價資訊</div>
+    <div class="sec"><div class="sec-title">報價資訊</div>
       <div class="field"><span class="fl">報價單號｜</span><span class="fv">${escHTML(q.qno)}</span></div>
       <div class="field"><span class="fl">報價日期｜</span><span class="fv">${q.date}</span></div>
       <div class="field"><span class="fl">有效日期｜</span><span class="fv">${q.validDate}</span></div>
@@ -879,8 +734,7 @@ function printQuote() {
       <div class="field"><span class="fl">聯絡電話｜</span><span class="fv">${escHTML(q.salespersonPhone||'—')}</span></div>
     </div>
   </div>
-  <div class="terms-box">
-    <div class="sec-title">報價條款</div>
+  <div class="terms-box"><div class="sec-title">報價條款</div>
     <div class="term"><span class="tl">合作確認｜</span><span class="tv">${escHTML(q.terms.confirm)}</span></div>
     <div class="term"><span class="tl">付款方式｜</span><span class="tv">${escHTML(q.terms.payment)}</span></div>
     <div class="term"><span class="tl">付款期限｜</span><span class="tv">${escHTML(q.terms.deadline)}</span></div>
@@ -888,7 +742,7 @@ function printQuote() {
     <div class="term"><span class="tl">補充條款｜</span><span class="tv">${escHTML(q.terms.extra)}</span></div>
   </div>
   <div class="items-header"><table style="width:100%;border-collapse:collapse"><tr>
-    <th style="width:36px;text-align:center">#</th><th>內容</th>
+    <th style="width:36px;text-align:center">#</th><th style="text-align:left">內容</th>
     <th style="text-align:right;width:90px">單價</th><th style="text-align:right;width:60px">數量</th>
     <th style="width:60px">單位</th><th style="text-align:right;width:90px">小計</th>
   </tr></table></div>
@@ -903,76 +757,63 @@ function printQuote() {
     <div class="sig"><div class="sec-title">客戶簽章</div><div class="sig-line">簽名 / 蓋章</div></div>
   </div></div>
   <script>window.onload=()=>{window.print();}<\/script></body></html>`;
-  const w=window.open('','_blank'); w.document.write(html); w.document.close();
+  const w=window.open('','_blank');w.document.write(html);w.document.close();
 }
 
-async function downloadPDF() {
-  const q = getCurrentQuote();
-  if (!q) { toast('請先選擇報價單','error'); return; }
-  collectFormData(q); saveQuotes();
+async function downloadPDF(){
+  const q=getCurrentQuote();if(!q){toast('請先選擇報價單','error');return;}
+  collectFormData(q);saveQuotes();
+  const btn=document.getElementById('btn-pdf');
+  if(btn){btn.textContent='⏳ 產生中…';btn.disabled=true;}
 
-  const btn = document.getElementById('btn-pdf');
-  if (btn) { btn.textContent='⏳ 產生中…'; btn.disabled=true; }
-
-  // 切換到「預覽列印」頁籤，讓報價內容真實渲染在畫面上
-  // html2canvas 只能擷取實際顯示在可視範圍內的元素
+  // 切換到預覽頁籤讓內容渲染到畫面
   document.querySelectorAll('.tab').forEach(el=>el.classList.remove('active'));
   document.getElementById('tab-preview')?.classList.add('active');
-  currentTab = 'preview';
-  renderPreview();
+  currentTab='preview'; renderPreview();
+  await new Promise(r=>setTimeout(r,400));
 
-  // 等待 DOM 完整渲染
-  await new Promise(r => setTimeout(r, 400));
+  const element=document.getElementById('pdf-target');
+  if(!element){toast('PDF 產生失敗','error');if(btn){btn.textContent='📥 下載 PDF';btn.disabled=false;}return;}
 
-  const element = document.getElementById('pdf-target');
-  if (!element) {
-    toast('PDF 產生失敗，請切換至「預覽列印」頁籤後再試','error');
-    if (btn) { btn.textContent='📥 下載 PDF'; btn.disabled=false; }
-    return;
-  }
-
-  try {
-    const filename = `${q.qno}_${(q.projectName||'報價單').replace(/[\/\\:*?"<>|]/g,'')}.pdf`;
+  try{
+    const filename=`${q.qno}_${(q.projectName||'報價單').replace(/[\/\\:*?"<>|]/g,'')}.pdf`;
     await html2pdf().set({
-      margin: [4, 4, 4, 4],
+      margin:0,
       filename,
-      image: { type: 'jpeg', quality: 0.97 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: '#ffffff',
-        logging: false,
-        scrollX: 0,
-        scrollY: -window.scrollY,
-        windowWidth: element.scrollWidth
+      image:{type:'jpeg',quality:0.97},
+      html2canvas:{
+        scale:2,
+        useCORS:true,
+        backgroundColor:'#ffffff',
+        logging:false,
+        // ★ 關鍵修正：用 onclone 移除置中 margin，讓元素對齊左上角，解決左側被裁切問題
+        onclone:(clonedDoc)=>{
+          const el=clonedDoc.getElementById('pdf-target');
+          if(el){
+            el.style.margin='0';
+            el.style.maxWidth='none';
+            el.style.width='800px';
+            el.style.boxShadow='none';
+            el.style.borderRadius='0';
+          }
+        }
       },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}
     }).from(element).save();
-    toast('PDF 已下載 ✓', 'success');
-  } catch(e) {
-    console.error(e);
-    toast('PDF 產生失敗，請改用「列印」', 'error');
-  } finally {
-    if (btn) { btn.textContent='📥 下載 PDF'; btn.disabled=false; }
+    toast('PDF 已下載 ✓','success');
+  }catch(e){
+    console.error(e);toast('PDF 產生失敗，請改用「列印」','error');
+  }finally{
+    if(btn){btn.textContent='📥 下載 PDF';btn.disabled=false;}
   }
 }
 
-function openModal(html) { document.getElementById('modal-body').innerHTML=html; document.getElementById('modal').classList.add('open'); }
-function closeModal() { document.getElementById('modal').classList.remove('open'); }
-document.getElementById('modal').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
-
-function fmt(n) { return Number(n||0).toLocaleString('zh-TW'); }
-function esc(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-function escHTML(s) { return esc(s); }
-function toast(msg, type='') {
-  const el=document.getElementById('toast');
-  el.textContent=msg; el.className='toast show '+type;
-  setTimeout(()=>el.classList.remove('show'),2500);
-}
+function openModal(html){document.getElementById('modal-body').innerHTML=html;document.getElementById('modal').classList.add('open');}
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
 
 renderQuoteList();
-if (quotes.length>0) { currentQuoteId=quotes[quotes.length-1].id; showPage('editor'); }
-else newQuote();
+if(quotes.length){currentQuoteId=quotes[quotes.length-1].id;showPage('editor');}else newQuote();
 </script>
 </body>
 </html>
