@@ -12,8 +12,6 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC','Noto Sans TC',sans-serif;min-height:100vh;}
 .app{display:flex;height:100vh;overflow:hidden;}
-
-/* Sidebar */
 .sidebar{width:240px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;}
 .logo{padding:18px 16px 14px;border-bottom:1px solid var(--border);}
 .logo h1{font-size:15px;font-weight:700;color:var(--accent2);letter-spacing:1px;}
@@ -31,14 +29,10 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .history-item .h-name{font-size:12px;color:var(--text);margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .history-item .h-date{font-size:10px;color:var(--muted);margin-top:1px;}
 .sidebar-bottom{padding:12px;border-top:1px solid var(--border);}
-
-/* Main */
 .main{flex:1;display:flex;flex-direction:column;overflow:hidden;}
 .topbar{height:54px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 22px;gap:10px;flex-shrink:0;}
 .topbar-title{font-size:15px;font-weight:600;flex:1;}
 .content{flex:1;overflow-y:auto;padding:24px;}
-
-/* Buttons */
 .btn{padding:7px 14px;border-radius:8px;border:none;cursor:pointer;font-size:12px;font-weight:500;transition:all .15s;display:inline-flex;align-items:center;gap:5px;}
 .btn-primary{background:var(--accent);color:#0c0d10;font-weight:600;}
 .btn-primary:hover{background:var(--accent2);}
@@ -46,16 +40,11 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .btn-ghost:hover{background:var(--surface2);color:var(--text);}
 .btn-success{background:var(--success);color:#fff;font-weight:600;}
 .btn-success:hover{opacity:.85;}
-.btn-danger{background:var(--danger);color:#fff;}
 .btn-sm{padding:5px 11px;font-size:12px;}
 .btn-full{width:100%;justify-content:center;}
-
-/* Tabs (topbar) */
 .tabs{display:flex;gap:3px;background:var(--bg);border-radius:8px;padding:3px;}
 .tab{padding:5px 14px;border-radius:6px;cursor:pointer;font-size:12px;color:var(--muted);border:none;background:none;transition:all .15s;}
 .tab.active{background:var(--accent);color:#0c0d10;font-weight:600;}
-
-/* Form */
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .form-group{display:flex;flex-direction:column;gap:5px;}
 .form-group.full{grid-column:1/-1;}
@@ -65,16 +54,12 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .form-group textarea{resize:vertical;min-height:56px;}
 .form-group select option{background:var(--surface2);}
 .section-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:16px;}
-.section-card-title{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-.section-card-title span{color:var(--muted);}
-
-/* Items table */
+.section-card-title{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:8px;}
 .items-table-wrap{overflow-x:auto;}
 .items-table{width:100%;border-collapse:collapse;}
 .items-table th{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;padding:7px 8px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap;}
 .items-table th.r{text-align:right;}
 .items-table td{padding:6px 8px;border-bottom:1px solid rgba(40,44,52,.6);vertical-align:middle;}
-.items-table tr:last-child td{border-bottom:none;}
 .item-input{background:var(--surface2);border:1px solid transparent;border-radius:6px;color:var(--text);padding:6px 8px;font-size:13px;font-family:inherit;outline:none;width:100%;transition:border-color .15s;}
 .item-input:focus{border-color:var(--accent);}
 .item-input.r{text-align:right;}
@@ -86,8 +71,6 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .total-row.grand .tv{color:var(--accent2);}
 .btn-icon{width:28px;height:28px;border-radius:5px;border:1px solid var(--border);background:transparent;color:var(--danger);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
 .btn-icon:hover{background:rgba(201,123,123,.1);}
-
-/* Profit tab */
 .profit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;}
 .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;}
 .stat-card .s-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
@@ -105,13 +88,10 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .margin-badge{display:inline-block;padding:2px 7px;border-radius:12px;font-size:11px;font-weight:600;}
 .margin-badge.good{background:rgba(90,171,143,.15);color:var(--success);}
 .margin-badge.warn{background:rgba(201,123,123,.15);color:var(--danger);}
-
-/* Item Library */
 .items-library-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
-.lib-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;position:relative;cursor:pointer;transition:border-color .15s;}
-.lib-card:hover{border-color:var(--accent);}
-.lib-card.selected{border-color:var(--accent);background:rgba(204,179,140,.06);}
-.lib-card .lc-name{font-size:14px;font-weight:600;color:var(--text);margin-bottom:10px;padding-right:48px;}
+.lib-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;position:relative;transition:border-color .15s;}
+.lib-card:hover{border-color:rgba(204,179,140,.4);}
+.lib-card .lc-name{font-size:14px;font-weight:600;color:var(--text);margin-bottom:10px;padding-right:56px;}
 .lib-card .lc-row{display:flex;gap:18px;margin-bottom:6px;}
 .lib-card .lc-field{display:flex;flex-direction:column;gap:2px;}
 .lib-card .lc-field .lf-label{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;}
@@ -125,8 +105,6 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .lib-card .lc-btn.edit:hover{background:rgba(204,179,140,.1);}
 .lib-card .lc-btn.del{color:var(--danger);}
 .lib-card .lc-btn.del:hover{background:rgba(201,123,123,.1);}
-
-/* Summary Report */
 .summary-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px;}
 .summary-table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
 .summary-table-wrap h3{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
@@ -138,7 +116,16 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .summary-table tr:last-child td{border-bottom:none;}
 .summary-table td.r{text-align:right;}
 .badge-count{background:rgba(204,179,140,.15);color:var(--accent2);font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;}
-
+/* Settings */
+.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.img-upload-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:14px;}
+.img-upload-card h3{font-size:13px;font-weight:700;color:var(--text);}
+.img-upload-card p{font-size:12px;color:var(--muted);line-height:1.5;}
+.img-preview-box{width:100%;min-height:80px;background:var(--surface2);border:1px dashed var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+.img-preview-box img{max-width:100%;max-height:100px;object-fit:contain;}
+.img-preview-box .empty-hint{font-size:11px;color:var(--muted);}
+.upload-btn-wrap{position:relative;}
+.upload-btn-wrap input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;}
 /* Modal */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:flex;align-items:center;justify-content:center;}
 .modal{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px;width:440px;max-width:92vw;max-height:80vh;display:flex;flex-direction:column;}
@@ -156,16 +143,12 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .pp-item .pp-label{font-size:9px;color:var(--muted);text-transform:uppercase;}
 .pp-item .pp-val{font-size:14px;font-weight:700;}
 .pp-item .pp-val.green{color:var(--success);}
-
-/* Lib select modal */
 .lib-select-list{display:flex;flex-direction:column;gap:8px;max-height:55vh;overflow-y:auto;}
 .lib-select-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;border:1px solid var(--border);cursor:pointer;transition:all .15s;}
 .lib-select-item:hover,.lib-select-item.sel{border-color:var(--accent);background:rgba(204,179,140,.06);}
 .lib-select-item .lsi-name{flex:1;font-size:13px;font-weight:500;}
 .lib-select-item .lsi-price{font-size:12px;color:var(--accent2);}
 .lib-select-item .lsi-unit{font-size:11px;color:var(--muted);}
-
-/* Misc */
 .empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px;color:var(--muted);}
 .empty-state .icon{font-size:48px;}
 .toast{position:fixed;bottom:24px;right:24px;padding:11px 18px;border-radius:10px;font-size:13px;font-weight:500;z-index:9999;animation:slideIn .2s ease;box-shadow:0 4px 20px rgba(0,0,0,.4);}
@@ -178,7 +161,6 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .sync-dot.offline{background:var(--danger);}
 .sync-dot.loading{background:var(--accent);animation:pulse 1s infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-
 /* Preview */
 .preview-wrap{background:#fff;color:#111;width:800px;margin:0 auto;padding:40px 44px;box-shadow:0 4px 40px rgba(0,0,0,.5);border-radius:4px;font-family:'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif;}
 .pv-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;}
@@ -209,9 +191,12 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 .pv-total-val{min-width:90px;text-align:right;font-weight:500;}
 .grand-row{font-size:14px;font-weight:700;border-top:1px solid #ddd;padding-top:8px;margin-top:4px;}
 .pv-footer{border:1px solid #ddd;border-top:none;display:grid;grid-template-columns:1fr 1fr;}
-.pv-bank{padding:12px 16px;border-right:1px solid #ddd;}
+.pv-bank{padding:12px 16px;border-right:1px solid #ddd;display:flex;gap:14px;align-items:flex-start;}
+.pv-bank-info{flex:1;}
 .pv-bank-title{font-size:9px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
 .pv-bank p{font-size:11px;margin-bottom:3px;color:#333;}
+.pv-stamp{width:80px;height:80px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.pv-stamp img{width:80px;height:80px;object-fit:contain;opacity:.88;}
 .pv-sig{padding:12px 16px;}
 .pv-sig-title{font-size:9px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
 .pv-sig-line{margin-top:36px;border-top:1px solid #bbb;padding-top:6px;font-size:10px;color:#999;text-align:center;}
@@ -219,21 +204,19 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
 </head>
 <body>
 <div class="app">
-  <!-- Sidebar -->
   <div class="sidebar">
     <div class="logo"><h1>以太四象</h1><p>報價單管理平台</p></div>
     <div class="nav-section">功能</div>
     <div class="nav-item active" id="nav-quotes" onclick="navigateTo('quotes')"><span class="icon">📄</span>編輯報價單</div>
     <div class="nav-item" id="nav-library" onclick="navigateTo('library')"><span class="icon">📦</span>品項資料庫</div>
     <div class="nav-item" id="nav-summary" onclick="navigateTo('summary')"><span class="icon">📊</span>匯總報表</div>
+    <div class="nav-item" id="nav-settings" onclick="navigateTo('settings')"><span class="icon">⚙️</span>平台設定</div>
     <div class="nav-section">歷史紀錄</div>
     <div class="history-list" id="history-list"><div style="padding:12px;text-align:center;color:var(--muted);font-size:12px"><div class="sync-dot loading" style="display:inline-block;margin-right:5px"></div>連線中</div></div>
     <div class="sidebar-bottom">
       <button class="btn btn-primary btn-full btn-sm" onclick="newQuote()">＋ 新增報價單</button>
     </div>
   </div>
-
-  <!-- Main -->
   <div class="main">
     <div class="topbar" id="topbar">
       <span class="topbar-title" id="topbar-title">以太四象報價單平台</span>
@@ -244,7 +227,6 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI','PingFang TC'
     </div>
   </div>
 </div>
-
 <script>
 // ── Firebase ──────────────────────────────────────────
 const firebaseConfig={apiKey:"AIzaSyC2ztlrDI_sNkkZbe3CEdvO8G_BLsTujHk",authDomain:"aether-quotation.firebaseapp.com",projectId:"aether-quotation",storageBucket:"aether-quotation.firebasestorage.app",messagingSenderId:"670135588708",appId:"1:670135588708:web:aeaee7812d7860c9908c71"};
@@ -264,6 +246,24 @@ const TERMS={
 
 // ── State ─────────────────────────────────────────────
 let quotes=[], libItems=[], currentQuoteId=null, currentTab='form', currentView='quotes';
+const DEFAULT_SETTINGS={logo:'./logo.png', stamp:'./stamp.png'};
+let settings={...DEFAULT_SETTINGS};
+
+// ── Load settings from localStorage ──────────────────
+function loadSettings(){
+  try{
+    const raw=localStorage.getItem('aether_settings');
+    if(raw){
+      const saved=JSON.parse(raw);
+      // Merge: saved values override defaults, but missing keys fall back to defaults
+      settings={...DEFAULT_SETTINGS, ...saved};
+    }
+  }catch(e){}
+}
+function saveSettings(){
+  localStorage.setItem('aether_settings', JSON.stringify(settings));
+}
+loadSettings();
 
 // ── Utils ─────────────────────────────────────────────
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
@@ -305,8 +305,6 @@ db.collection('quotes').orderBy('createdAt','desc').onSnapshot(snap=>{
   renderHistoryList();setSyncStatus('online');
   if(currentView==='quotes'&&currentQuoteId){
     if(!quotes.find(q=>q.id===currentQuoteId)){currentQuoteId=null;renderEmpty();}
-    else if(currentTab==='form'){}// don't re-render form (would clear user input)
-    else renderCurrentTab();
   }
   if(currentView==='summary')renderSummary();
 },err=>{console.error(err);setSyncStatus('offline');toast('連線失敗','error');});
@@ -321,27 +319,19 @@ async function saveQ(q){
   try{await db.collection('quotes').doc(q.id).set(JSON.parse(JSON.stringify(q)));setSyncStatus('online');}
   catch(e){toast('儲存失敗','error');setSyncStatus('offline');}
 }
-async function deleteQ(id){
-  try{await db.collection('quotes').doc(id).delete();}
-  catch(e){toast('刪除失敗','error');}
-}
-async function saveItem(item){
-  try{await db.collection('items').doc(item.id).set(JSON.parse(JSON.stringify(item)));}
-  catch(e){toast('儲存失敗','error');}
-}
-async function deleteItem(id){
-  try{await db.collection('items').doc(id).delete();}
-  catch(e){toast('刪除失敗','error');}
-}
+async function deleteQ(id){try{await db.collection('quotes').doc(id).delete();}catch(e){toast('刪除失敗','error');}}
+async function saveItem(item){try{await db.collection('items').doc(item.id).set(JSON.parse(JSON.stringify(item)));}catch(e){toast('儲存失敗','error');}}
+async function deleteItem(id){try{await db.collection('items').doc(id).delete();}catch(e){toast('刪除失敗','error');}}
 
 // ── Navigation ────────────────────────────────────────
 function navigateTo(view){
   currentView=view;
   document.querySelectorAll('.nav-item').forEach(el=>el.classList.remove('active'));
   document.getElementById('nav-'+view)?.classList.add('active');
-  if(view==='quotes'){renderQuoteView();}
-  else if(view==='library'){renderLibraryView();}
-  else if(view==='summary'){renderSummaryView();}
+  if(view==='quotes')renderQuoteView();
+  else if(view==='library')renderLibraryView();
+  else if(view==='summary')renderSummaryView();
+  else if(view==='settings')renderSettingsView();
 }
 
 // ── History Sidebar ───────────────────────────────────
@@ -364,7 +354,6 @@ function newBlankQuote(){
     terms:{...TERMS},createdAt:new Date().toISOString()};
 }
 function getCurrentQ(){return quotes.find(q=>q.id===currentQuoteId)||null;}
-
 function newQuote(){
   const q=newBlankQuote();quotes.unshift(q);currentQuoteId=q.id;
   saveQ(q);navigateTo('quotes');renderHistoryList();
@@ -378,10 +367,7 @@ async function deleteCurrentQuote(){
   if(!confirm(`確定要刪除「${q.qno}」？`))return;
   const id=q.id;currentQuoteId=null;await deleteQ(id);renderEmpty();renderQuoteTopbar();toast('已刪除','info');
 }
-function selectQuote(id){
-  currentQuoteId=id;currentTab='form';
-  renderHistoryList();navigateTo('quotes');
-}
+function selectQuote(id){currentQuoteId=id;currentTab='form';renderHistoryList();navigateTo('quotes');}
 
 // ── Collect Form ──────────────────────────────────────
 function collectForm(q){
@@ -398,23 +384,16 @@ function collectTerms(q){
 }
 
 // ── Quote View ────────────────────────────────────────
-function renderQuoteView(){
-  if(currentQuoteId){renderCurrentTab();}else{renderEmpty();}
-  renderQuoteTopbar();
-}
-function renderEmpty(){
-  document.getElementById('main-content').innerHTML='<div class="empty-state"><div class="icon">📄</div><p>請選擇或建立報價單</p></div>';
-}
+function renderQuoteView(){if(currentQuoteId){renderCurrentTab();}else{renderEmpty();}renderQuoteTopbar();}
+function renderEmpty(){document.getElementById('main-content').innerHTML='<div class="empty-state"><div class="icon">📄</div><p>請選擇或建立報價單</p></div>';}
 function renderCurrentTab(){
   if(currentTab==='form')renderForm();
   else if(currentTab==='profit')renderProfitTab();
   else if(currentTab==='preview')renderPreview();
-  else if(currentTab==='terms')renderTermsTab();
 }
 function switchTab(tab){
   const q=getCurrentQ();
   if(q&&currentTab==='form')collectForm(q);
-  if(q&&currentTab==='terms')collectTerms(q);
   currentTab=tab;
   document.querySelectorAll('.tab').forEach(el=>el.classList.remove('active'));
   document.getElementById('tab-'+tab)?.classList.add('active');
@@ -422,26 +401,23 @@ function switchTab(tab){
 }
 function renderQuoteTopbar(){
   const q=getCurrentQ();
-  document.getElementById('topbar-title').textContent=q?`${q.qno}　${q.projectName||'（未命名）'}`:'編輯報價單';
   const tb=document.getElementById('topbar');
-  // Remove old right-side elements
-  tb.querySelectorAll('.tb-right').forEach(el=>el.remove());
   if(!q){
     tb.innerHTML=`<span class="topbar-title" id="topbar-title">編輯報價單</span><div id="sync-status" class="sync-badge"><div class="sync-dot"></div><span>已同步</span></div>`;
     return;
   }
   tb.innerHTML=`
-    <span class="topbar-title" id="topbar-title">${esc(q.qno)}　${esc(q.projectName||'（未命名）')}</span>
-    <div id="sync-status" class="sync-badge tb-right"><div class="sync-dot"></div><span>已同步</span></div>
-    <div class="tabs tb-right">
+    <span class="topbar-title">${esc(q.qno)}　${esc(q.projectName||'（未命名）')}</span>
+    <div id="sync-status" class="sync-badge"><div class="sync-dot"></div><span>已同步</span></div>
+    <div class="tabs">
       <button class="tab${currentTab==='form'?' active':''}" id="tab-form" onclick="switchTab('form')">填寫資料</button>
       <button class="tab${currentTab==='profit'?' active':''}" id="tab-profit" onclick="switchTab('profit')">利潤結算</button>
       <button class="tab${currentTab==='preview'?' active':''}" id="tab-preview" onclick="switchTab('preview')">預覽列印</button>
     </div>
-    <button class="btn btn-ghost btn-sm tb-right" onclick="deleteCurrentQuote()">🗑 刪除</button>
-    <button class="btn btn-success btn-sm tb-right" onclick="saveCurrentQuote()">💾 儲存</button>
-    <button class="btn btn-ghost btn-sm tb-right" onclick="printQuote()">🖨 列印</button>
-    <button class="btn btn-primary btn-sm tb-right" id="btn-pdf" onclick="downloadPDF()">📥 下載 PDF</button>`;
+    <button class="btn btn-ghost btn-sm" onclick="deleteCurrentQuote()">🗑 刪除</button>
+    <button class="btn btn-success btn-sm" onclick="saveCurrentQuote()">💾 儲存</button>
+    <button class="btn btn-ghost btn-sm" onclick="printQuote()">🖨 列印</button>
+    <button class="btn btn-primary btn-sm" id="btn-pdf" onclick="downloadPDF()">📥 下載 PDF</button>`;
 }
 
 // ── Form Tab ──────────────────────────────────────────
@@ -456,7 +432,7 @@ function renderForm(){
       <td><input class="item-input r" id="i-cost-${i}" type="number" value="${item.cost||0}" oninput="syncItems()" style="width:88px"></td>
       <td><input class="item-input r" id="i-qty-${i}" type="number" value="${item.qty||1}" oninput="syncItems()" style="width:60px"></td>
       <td><input class="item-input" id="i-unit-${i}" value="${esc(item.unit||'式')}" style="width:52px"></td>
-      <td style="text-align:right;font-size:12px;color:var(--text);white-space:nowrap" id="i-sub-${i}">NT$ ${fmt((item.price||0)*(item.qty||1))}</td>
+      <td style="text-align:right;font-size:12px;white-space:nowrap" id="i-sub-${i}">NT$ ${fmt((item.price||0)*(item.qty||1))}</td>
       <td><input class="item-input" id="i-note-${i}" value="${esc(item.note||'')}" placeholder="備註" style="width:110px;font-size:12px;color:var(--muted)"></td>
       <td><button class="btn-icon" onclick="removeItem(${i})">✕</button></td>
     </tr>`).join('');
@@ -486,7 +462,7 @@ function renderForm(){
       </div>
     </div>
     <div class="section-card">
-      <div class="section-card-title" style="justify-content:space-between">
+      <div class="section-card-title">
         <span>💰 報價內容 <span style="font-size:10px;font-weight:400;color:var(--muted)">(成本僅內部可見)</span></span>
         <div style="display:flex;gap:8px">
           <button class="btn btn-ghost btn-sm" onclick="openLibSelect()">📦 從資料庫選取</button>
@@ -496,15 +472,10 @@ function renderForm(){
       <div class="items-table-wrap">
         <table class="items-table">
           <thead><tr>
-            <th style="width:32px">#</th>
-            <th>內容</th>
-            <th class="r" style="width:96px">售價 (NT$)</th>
-            <th class="r" style="width:96px">成本 (NT$)</th>
-            <th class="r" style="width:66px">數量</th>
-            <th style="width:58px">單位</th>
-            <th class="r" style="width:90px">小計</th>
-            <th style="width:118px">備註</th>
-            <th style="width:32px"></th>
+            <th style="width:32px">#</th><th>內容</th>
+            <th class="r" style="width:96px">售價 (NT$)</th><th class="r" style="width:96px">成本 (NT$)</th>
+            <th class="r" style="width:66px">數量</th><th style="width:58px">單位</th>
+            <th class="r" style="width:90px">小計</th><th style="width:118px">備註</th><th style="width:32px"></th>
           </tr></thead>
           <tbody>${itemRows}</tbody>
         </table>
@@ -516,7 +487,7 @@ function renderForm(){
       </div>
     </div>
     <div class="section-card">
-      <div class="section-card-title" style="justify-content:space-between">
+      <div class="section-card-title">
         <span>📝 報價條款</span>
         <button class="btn btn-ghost btn-sm" onclick="resetTerms()">↺ 還原預設</button>
       </div>
@@ -529,75 +500,42 @@ function renderForm(){
       </div>
     </div>`;
 }
-
 function syncItems(){
-  const q=getCurrentQ();if(!q)return;
-  collectForm(q);
-  q.items.forEach((item,i)=>{
-    const sub=document.getElementById('i-sub-'+i);
-    if(sub)sub.textContent=`NT$ ${fmt((item.price||0)*(item.qty||1))}`;
-  });
+  const q=getCurrentQ();if(!q)return;collectForm(q);
+  q.items.forEach((item,i)=>{const sub=document.getElementById('i-sub-'+i);if(sub)sub.textContent=`NT$ ${fmt((item.price||0)*(item.qty||1));}`;});
   const{revenue,tax,total}=calcQ(q);
   const ts=document.getElementById('tot-sub'),tt=document.getElementById('tot-tax'),tg=document.getElementById('tot-total');
-  if(ts)ts.textContent=`NT$ ${fmt(revenue)}`;
-  if(tt)tt.textContent=`NT$ ${fmt(tax)}`;
-  if(tg)tg.textContent=`NT$ ${fmt(total)}`;
+  if(ts)ts.textContent=`NT$ ${fmt(revenue)}`;if(tt)tt.textContent=`NT$ ${fmt(tax)}`;if(tg)tg.textContent=`NT$ ${fmt(total)}`;
 }
-
-function addItem(){
-  const q=getCurrentQ();if(!q)return;
-  collectForm(q);q.items.push({id:uid(),name:'',price:0,cost:0,qty:1,unit:'式',note:''});renderForm();
-}
-function removeItem(i){
-  const q=getCurrentQ();if(!q)return;
-  collectForm(q);if(q.items.length<=1){toast('至少保留一個項目','error');return;}
-  q.items.splice(i,1);renderForm();
-}
-function resetTerms(){
-  ['confirm','payment','deadline','warranty','extra'].forEach(k=>{const el=document.getElementById('f-t-'+k);if(el)el.value=TERMS[k];});
-  toast('條款已還原');
-}
+function addItem(){const q=getCurrentQ();if(!q)return;collectForm(q);q.items.push({id:uid(),name:'',price:0,cost:0,qty:1,unit:'式',note:''});renderForm();}
+function removeItem(i){const q=getCurrentQ();if(!q)return;collectForm(q);if(q.items.length<=1){toast('至少保留一個項目','error');return;}q.items.splice(i,1);renderForm();}
+function resetTerms(){['confirm','payment','deadline','warranty','extra'].forEach(k=>{const el=document.getElementById('f-t-'+k);if(el)el.value=TERMS[k];});toast('條款已還原');}
 
 // ── Library Select Modal ──────────────────────────────
+let selectedLibIds=new Set();
 function openLibSelect(){
-  if(!libItems.length){toast('品項資料庫是空的，請先新增品項','info');return;}
+  if(!libItems.length){toast('品項資料庫是空的','info');return;}
+  selectedLibIds=new Set();
   const overlay=document.createElement('div');overlay.className='modal-overlay';overlay.id='lib-select-modal';
-  overlay.innerHTML=`<div class="modal">
-    <h3>📦 從資料庫選取品項</h3>
-    <div class="modal-body">
-      <div class="lib-select-list">${libItems.map(item=>`
-        <div class="lib-select-item" id="lsi-${item.id}" onclick="toggleLibSelect('${item.id}')">
-          <div style="flex:1">
-            <div class="lsi-name">${esc(item.name)}</div>
-            ${item.note?`<div style="font-size:11px;color:var(--muted);margin-top:2px">${esc(item.note)}</div>`:''}
-          </div>
-          <span class="lsi-price">NT$ ${fmt(item.price)}</span>
-          <span class="lsi-unit">/ ${esc(item.unit||'式')}</span>
-        </div>`).join('')}
-      </div>
-    </div>
+  overlay.innerHTML=`<div class="modal"><h3>📦 從資料庫選取品項</h3>
+    <div class="modal-body"><div class="lib-select-list">${libItems.map(item=>`
+      <div class="lib-select-item" id="lsi-${item.id}" onclick="toggleLibSelect('${item.id}')">
+        <div style="flex:1"><div class="lsi-name">${esc(item.name)}</div>${item.note?`<div style="font-size:11px;color:var(--muted);margin-top:2px">${esc(item.note)}</div>`:''}</div>
+        <span class="lsi-price">NT$ ${fmt(item.price)}</span><span class="lsi-unit"> / ${esc(item.unit||'式')}</span>
+      </div>`).join('')}</div></div>
     <div class="modal-actions">
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('lib-select-modal').remove()">取消</button>
       <button class="btn btn-primary btn-sm" onclick="addSelectedLibItems()">加入報價單</button>
-    </div>
-  </div>`;
+    </div></div>`;
   document.body.appendChild(overlay);
 }
-let selectedLibIds=new Set();
-function toggleLibSelect(id){
-  selectedLibIds.has(id)?selectedLibIds.delete(id):selectedLibIds.add(id);
-  document.getElementById('lsi-'+id)?.classList.toggle('sel');
-}
+function toggleLibSelect(id){selectedLibIds.has(id)?selectedLibIds.delete(id):selectedLibIds.add(id);document.getElementById('lsi-'+id)?.classList.toggle('sel');}
 function addSelectedLibItems(){
-  const q=getCurrentQ();if(!q)return;
-  collectForm(q);
-  libItems.filter(i=>selectedLibIds.has(i.id)).forEach(item=>{
-    q.items.push({id:uid(),name:item.name,price:item.price||0,cost:item.cost||0,qty:1,unit:item.unit||'式',note:item.note||''});
-  });
-  selectedLibIds=new Set();
+  const q=getCurrentQ();if(!q)return;collectForm(q);
+  const added=libItems.filter(i=>selectedLibIds.has(i.id));
+  added.forEach(item=>q.items.push({id:uid(),name:item.name,price:item.price||0,cost:item.cost||0,qty:1,unit:item.unit||'式',note:item.note||''}));
   document.getElementById('lib-select-modal')?.remove();
-  renderForm();
-  toast(`已加入 ${selectedLibIds.size||'選取的'} 項目`,'success');
+  renderForm();if(added.length)toast(`已加入 ${added.length} 個品項`,'success');
 }
 
 // ── Profit Tab ────────────────────────────────────────
@@ -607,50 +545,54 @@ function renderProfitTab(){
   const{revenue,totalCost,tax,total,profit,margin}=calcQ(q);
   const mc=margin>=50?'green':margin>=30?'gold':'red';
   const itemRows=q.items.map((item,i)=>{
-    const rev=(item.price||0)*(item.qty||1);
-    const cost=(item.cost||0)*(item.qty||1);
-    const p=rev-cost;
-    const r=rev>0?Math.round(p/rev*100):0;
-    return`<tr>
-      <td>${i+1}</td>
-      <td>${esc(item.name)||'—'}</td>
-      <td class="r">NT$ ${fmt(item.price)}</td>
-      <td class="r">NT$ ${fmt(item.cost)}</td>
-      <td class="r">${item.qty} ${esc(item.unit)}</td>
-      <td class="r">NT$ ${fmt(rev)}</td>
-      <td class="r">NT$ ${fmt(cost)}</td>
-      <td class="r"><span style="color:${p>=0?'var(--success)':'var(--danger)'}">NT$ ${fmt(p)}</span></td>
-      <td class="r"><span class="margin-badge ${r>=30?'good':'warn'}">${r}%</span></td>
-    </tr>`;}).join('');
+    const rev=(item.price||0)*(item.qty||1),cost=(item.cost||0)*(item.qty||1),p=rev-cost,r=rev>0?Math.round(p/rev*100):0;
+    return`<tr><td>${i+1}</td><td>${esc(item.name)||'—'}</td><td class="r">NT$ ${fmt(item.price)}</td><td class="r">NT$ ${fmt(item.cost)}</td><td class="r">${item.qty} ${esc(item.unit)}</td><td class="r">NT$ ${fmt(rev)}</td><td class="r">NT$ ${fmt(cost)}</td><td class="r" style="color:${p>=0?'var(--success)':'var(--danger)'}">NT$ ${fmt(p)}</td><td class="r"><span class="margin-badge ${r>=30?'good':'warn'}">${r}%</span></td></tr>`;
+  }).join('');
   document.getElementById('main-content').innerHTML=`
     <div class="profit-grid">
       <div class="stat-card"><div class="s-label">報價含稅總額</div><div class="s-val gold">NT$ ${fmt(total)}</div></div>
       <div class="stat-card"><div class="s-label">總成本</div><div class="s-val">NT$ ${fmt(totalCost)}</div></div>
       <div class="stat-card"><div class="s-label">累計毛利</div><div class="s-val ${profit>=0?'green':'red'}">${profit>=0?'+':''}NT$ ${fmt(profit)}</div></div>
-      <div class="stat-card"><div class="s-label">平均毛利率</div><div class="s-val ${mc}" style="font-size:24px">${margin}%</div></div>
+      <div class="stat-card"><div class="s-label">毛利率</div><div class="s-val ${mc}" style="font-size:24px">${margin}%</div></div>
     </div>
-    <div class="profit-items-table">
-      <table><thead><tr>
-        <th>#</th><th>品項</th><th class="r">售價</th><th class="r">成本</th><th class="r">數量</th>
-        <th class="r">收入小計</th><th class="r">成本小計</th><th class="r">毛利</th><th class="r">毛利率</th>
-      </tr></thead><tbody>${itemRows}</tbody></table>
-    </div>`;
+    <div class="profit-items-table"><table><thead><tr>
+      <th>#</th><th>品項</th><th class="r">售價</th><th class="r">成本</th><th class="r">數量</th><th class="r">收入小計</th><th class="r">成本小計</th><th class="r">毛利</th><th class="r">毛利率</th>
+    </tr></thead><tbody>${itemRows}</tbody></table></div>`;
 }
 
-// ── Preview Tab ───────────────────────────────────────
+// ── Preview & PDF ─────────────────────────────────────
+function logoHTML(forPrint=false){
+  if(settings.logo){
+    const h=forPrint?'52px':'44px';
+    return`<img src="${settings.logo}" alt="${COMPANY.name}" style="height:${h};max-width:220px;object-fit:contain;display:block;">`;
+  }
+  return forPrint
+    ?`<strong style="display:block;font-size:17px;font-weight:700;letter-spacing:2px">${COMPANY.name}</strong><span style="display:block;font-size:11px;color:#888;letter-spacing:1px;margin-top:3px">Aether Four Studio</span>`
+    :`<strong>${COMPANY.name}</strong><span>Aether Four Studio</span>`;
+}
+function stampHTML(forPrint=false){
+  if(settings.stamp){
+    const sz=forPrint?'84px':'80px';
+    return`<div style="width:${sz};height:${sz};flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="${settings.stamp}" style="width:${sz};height:${sz};object-fit:contain;opacity:.88;"></div>`;
+  }
+  return'';
+}
+
 function buildPreviewHTML(q){
   const{revenue,tax,total}=calcQ(q);
   const itemRows=q.items.map((item,i)=>`
     <div class="pv-item-row">
       <div class="pv-num">${i+1}</div>
       <div><div>${esc(item.name)||'—'}</div>${item.note?`<div style="font-size:10px;color:#888;margin-top:3px;white-space:pre-line;line-height:1.5;border-left:2px solid #ddd;padding-left:5px">${esc(item.note)}</div>`:''}</div>
-      <div class="pv-money">NT$ ${fmt(item.price)}</div>
-      <div class="pv-money">${item.qty}</div>
-      <div>${esc(item.unit)}</div>
-      <div class="pv-money">NT$ ${fmt(item.price*item.qty)}</div>
+      <div class="pv-money">NT$ ${fmt(item.price)}</div><div class="pv-money">${item.qty}</div>
+      <div>${esc(item.unit)}</div><div class="pv-money">NT$ ${fmt(item.price*item.qty)}</div>
     </div>`).join('');
+  const stampSection=settings.stamp?`<div class="pv-stamp"><img src="${settings.stamp}" style="width:80px;height:80px;object-fit:contain;opacity:.88;"></div>`:'';
   return`<div class="preview-wrap" id="pdf-target">
-    <div class="pv-header"><div class="pv-brand"><strong>${COMPANY.name}</strong><span>Aether Four Studio</span></div><div class="pv-title">QUOTATION</div></div>
+    <div class="pv-header">
+      <div class="pv-brand">${logoHTML()}</div>
+      <div class="pv-title">QUOTATION</div>
+    </div>
     <div class="pv-sections">
       <div class="pv-section">
         <div class="pv-section-title">專案資訊</div>
@@ -690,7 +632,13 @@ function buildPreviewHTML(q){
       <div class="pv-total-row grand-row"><span class="pv-total-label">總計</span><span class="pv-total-val">NT$ ${fmt(total)}</span></div>
     </div>
     <div class="pv-footer">
-      <div class="pv-bank"><div class="pv-bank-title">匯款帳戶</div><p>${COMPANY.bank}</p><p>帳號：${COMPANY.account}</p><p>戶名：${COMPANY.holder}</p></div>
+      <div class="pv-bank">
+        <div class="pv-bank-info">
+          <div class="pv-bank-title">匯款帳戶</div>
+          <p>${COMPANY.bank}</p><p>帳號：${COMPANY.account}</p><p>戶名：${COMPANY.holder}</p>
+        </div>
+        ${stampSection}
+      </div>
       <div class="pv-sig"><div class="pv-sig-title">客戶簽章</div><div class="pv-sig-line">簽名 / 蓋章</div></div>
     </div>
   </div>`;
@@ -701,20 +649,17 @@ function renderPreview(){
   document.getElementById('main-content').innerHTML=`<div style="padding-bottom:40px">${buildPreviewHTML(q)}</div>`;
 }
 
-// ── Print & PDF ───────────────────────────────────────
+// ── Print ─────────────────────────────────────────────
 function printQuote(){
   const q=getCurrentQ();if(!q){toast('請先選擇報價單','error');return;}
   collectForm(q);saveQ(q);
   const{revenue,tax,total}=calcQ(q);
-  const rows=q.items.map((item,i)=>`<tr>
-    <td style="text-align:center">${i+1}</td>
-    <td>${esc(item.name)||'—'}${item.note?`<div style="font-size:11px;color:#888;margin-top:4px;white-space:pre-line">${esc(item.note)}</div>`:''}</td>
-    <td style="text-align:right">NT$ ${fmt(item.price)}</td><td style="text-align:right">${item.qty}</td>
-    <td>${esc(item.unit)}</td><td style="text-align:right">NT$ ${fmt(item.price*item.qty)}</td></tr>`).join('');
+  const rows=q.items.map((item,i)=>`<tr><td style="text-align:center">${i+1}</td><td>${esc(item.name)||'—'}${item.note?`<div style="font-size:11px;color:#888;margin-top:4px;white-space:pre-line">${esc(item.note)}</div>`:''}</td><td style="text-align:right">NT$ ${fmt(item.price)}</td><td style="text-align:right">${item.qty}</td><td>${esc(item.unit)}</td><td style="text-align:right">NT$ ${fmt(item.price*item.qty)}</td></tr>`).join('');
+  const logoSec=settings.logo?`<img src="${settings.logo}" alt="${COMPANY.name}" style="height:52px;max-width:220px;object-fit:contain;display:block;">`:`<strong style="display:block;font-size:17px;font-weight:700;letter-spacing:2px">${COMPANY.name}</strong><span style="display:block;font-size:11px;color:#888;letter-spacing:1px;margin-top:3px">Aether Four Studio</span>`;
+  const stampSec=settings.stamp?`<img src="${settings.stamp}" style="width:80px;height:80px;object-fit:contain;opacity:.88;margin-left:14px;flex-shrink:0;">`:'';
   const html=`<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>${esc(q.qno)}</title>
   <style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif;color:#111;background:#fff}
   .wrap{max-width:900px;margin:0 auto;padding:40px 48px}.hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
-  .brand strong{display:block;font-size:17px;font-weight:700;letter-spacing:2px}.brand span{display:block;font-size:11px;color:#888;letter-spacing:1px;margin-top:3px}
   .title{font-size:26px;font-weight:800;letter-spacing:6px}
   .sections{display:grid;grid-template-columns:1fr 1fr;border:1px solid #ddd}.sec{padding:14px 18px}.sec:first-child{border-right:1px solid #ddd}
   .sec-title{font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #eee;padding-bottom:5px;margin-bottom:8px}
@@ -726,10 +671,10 @@ function printQuote(){
   .tl2{color:#888;min-width:80px;text-align:right}.tv2{min-width:100px;text-align:right;font-weight:500}
   .tr.grand{font-size:14px;font-weight:700;border-top:1px solid #ddd;padding-top:8px;margin-top:4px}
   .footer{border:1px solid #ddd;border-top:none;display:grid;grid-template-columns:1fr 1fr}
-  .bank{padding:14px 18px;border-right:1px solid #ddd}.bank p{font-size:12px;margin-bottom:3px}.sig{padding:14px 18px}
+  .bank{padding:14px 18px;border-right:1px solid #ddd;display:flex;align-items:flex-start}.bank p{font-size:12px;margin-bottom:3px}.sig{padding:14px 18px}
   .sig-line{margin-top:36px;border-top:1px solid #bbb;padding-top:6px;font-size:11px;color:#999;text-align:center}
   @media print{@page{margin:1cm}}</style></head><body><div class="wrap">
-  <div class="hdr"><div class="brand"><strong>${COMPANY.name}</strong><span>Aether Four Studio</span></div><div class="title">QUOTATION</div></div>
+  <div class="hdr"><div class="brand">${logoSec}</div><div class="title">QUOTATION</div></div>
   <div class="sections">
     <div class="sec"><div class="sec-title">專案資訊</div>
       <div class="field"><span class="fl">專案名稱｜</span><span class="fv">${esc(q.projectName)||'—'}</span></div>
@@ -763,12 +708,16 @@ function printQuote(){
     <div class="tr grand"><span class="tl2">總計</span><span class="tv2">NT$ ${fmt(total)}</span></div>
   </div>
   <div class="footer">
-    <div class="bank"><strong style="font-size:11px;color:#888;letter-spacing:1px">匯款帳戶</strong><p style="margin-top:6px">${COMPANY.bank}</p><p>帳號：${COMPANY.account}</p><p>戶名：${COMPANY.holder}</p></div>
+    <div class="bank">
+      <div style="flex:1"><strong style="font-size:11px;color:#888;letter-spacing:1px">匯款帳戶</strong><p style="margin-top:6px">${COMPANY.bank}</p><p>帳號：${COMPANY.account}</p><p>戶名：${COMPANY.holder}</p></div>
+      ${stampSec}
+    </div>
     <div class="sig"><strong style="font-size:11px;color:#888;letter-spacing:1px">客戶簽章</strong><div class="sig-line">簽名 / 蓋章</div></div>
   </div></div><script>window.onload=()=>window.print()<\/script></body></html>`;
   const w=window.open('','_blank');w.document.write(html);w.document.close();
 }
 
+// ── PDF ───────────────────────────────────────────────
 async function downloadPDF(){
   const q=getCurrentQ();if(!q){toast('請先選擇報價單','error');return;}
   collectForm(q);saveQ(q);
@@ -784,7 +733,7 @@ async function downloadPDF(){
     const filename=`${q.qno}_${(q.projectName||'報價單').replace(/[\/\\:*?"<>|]/g,'')}.pdf`;
     await html2pdf().set({margin:0,filename,image:{type:'jpeg',quality:0.97},
       html2canvas:{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false,
-        onclone:(clonedDoc)=>{const el=clonedDoc.getElementById('pdf-target');if(el){el.style.margin='0';el.style.maxWidth='none';el.style.width='800px';el.style.boxShadow='none';el.style.borderRadius='0';}}},
+        onclone:(doc)=>{const el=doc.getElementById('pdf-target');if(el){el.style.margin='0';el.style.maxWidth='none';el.style.width='800px';el.style.boxShadow='none';el.style.borderRadius='0';}}},
       jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}}).from(element).save();
     toast('PDF 已下載 ✓','success');
   }catch(e){console.error(e);toast('PDF 產生失敗，請改用「列印」','error');}
@@ -793,26 +742,17 @@ async function downloadPDF(){
 
 // ── Library View ──────────────────────────────────────
 function renderLibraryView(){
-  document.getElementById('topbar').innerHTML=`
-    <span class="topbar-title" id="topbar-title">品項資料庫</span>
-    <div id="sync-status" class="sync-badge"><div class="sync-dot"></div><span>已同步</span></div>
-    <button class="btn btn-primary btn-sm" onclick="openItemModal()">＋ 新增品項</button>`;
+  document.getElementById('topbar').innerHTML=`<span class="topbar-title">品項資料庫</span><div id="sync-status" class="sync-badge"><div class="sync-dot"></div><span>已同步</span></div><button class="btn btn-primary btn-sm" onclick="openItemModal()">＋ 新增品項</button>`;
   renderLibrary();
 }
 function renderLibrary(){
   if(currentView!=='library')return;
   const c=document.getElementById('main-content');
-  if(!libItems.length){
-    c.innerHTML=`<div class="empty-state"><div class="icon">📦</div><p>尚無品項，點右上角新增</p></div>`;return;
-  }
+  if(!libItems.length){c.innerHTML=`<div class="empty-state"><div class="icon">📦</div><p>尚無品項，點右上角新增</p></div>`;return;}
   c.innerHTML=`<div class="items-library-grid">${libItems.map(item=>{
-    const profit=(item.price||0)-(item.cost||0);
-    const rate=(item.price||0)>0?Math.round(profit/(item.price||1)*100):0;
+    const profit=(item.price||0)-(item.cost||0),rate=(item.price||0)>0?Math.round(profit/(item.price||1)*100):0;
     return`<div class="lib-card">
-      <div class="lc-actions">
-        <button class="lc-btn edit" onclick="openItemModal('${item.id}')">✏️</button>
-        <button class="lc-btn del" onclick="confirmDeleteItem('${item.id}')">✕</button>
-      </div>
+      <div class="lc-actions"><button class="lc-btn edit" onclick="openItemModal('${item.id}')">✏️</button><button class="lc-btn del" onclick="confirmDeleteItem('${item.id}')">✕</button></div>
       <div class="lc-name">${esc(item.name)}</div>
       <div class="lc-row">
         <div class="lc-field"><span class="lf-label">售價</span><span class="lf-val">NT$ ${fmt(item.price)} / ${esc(item.unit||'式')}</span></div>
@@ -822,41 +762,31 @@ function renderLibrary(){
       ${item.note?`<div class="lc-note">${esc(item.note)}</div>`:''}
     </div>`;}).join('')}</div>`;
 }
-
 function openItemModal(id=null){
   const item=id?libItems.find(i=>i.id===id):null;
   const overlay=document.createElement('div');overlay.className='modal-overlay';overlay.id='item-modal';
-  overlay.innerHTML=`<div class="modal">
-    <h3>${item?'編輯品項':'新增品項'}</h3>
-    <div class="modal-body">
-      <div class="modal-form">
-        <div><label>品項名稱</label><input id="mi-name" value="${esc(item?.name||'')}" placeholder="例：LED 顯示幕租賃"></div>
-        <div class="mf-row">
-          <div><label>售價 (NT$)</label><input id="mi-price" type="number" value="${item?.price||0}" oninput="updateProfitPreview()"></div>
-          <div><label>成本 (NT$)</label><input id="mi-cost" type="number" value="${item?.cost||0}" oninput="updateProfitPreview()"></div>
-        </div>
-        <div><label>單位</label><input id="mi-unit" value="${esc(item?.unit||'式')}" placeholder="式、場、人/天…"></div>
-        <div><label>備註</label><textarea id="mi-note" rows="2" placeholder="品項說明（選填）">${esc(item?.note||'')}</textarea></div>
-        <div class="profit-preview" id="profit-preview">${getProfitPreviewHTML(item?.price||0,item?.cost||0)}</div>
+  overlay.innerHTML=`<div class="modal"><h3>${item?'編輯品項':'新增品項'}</h3>
+    <div class="modal-body"><div class="modal-form">
+      <div><label>品項名稱</label><input id="mi-name" value="${esc(item?.name||'')}" placeholder="例：LED 顯示幕租賃"></div>
+      <div class="mf-row">
+        <div><label>售價 (NT$)</label><input id="mi-price" type="number" value="${item?.price||0}" oninput="updateProfitPreview()"></div>
+        <div><label>成本 (NT$)</label><input id="mi-cost" type="number" value="${item?.cost||0}" oninput="updateProfitPreview()"></div>
       </div>
-    </div>
+      <div><label>單位</label><input id="mi-unit" value="${esc(item?.unit||'式')}" placeholder="式、場、人/天…"></div>
+      <div><label>備註</label><textarea id="mi-note" rows="2">${esc(item?.note||'')}</textarea></div>
+      <div class="profit-preview" id="profit-preview">${getProfitPreviewHTML(item?.price||0,item?.cost||0)}</div>
+    </div></div>
     <div class="modal-actions">
       <button class="btn btn-ghost btn-sm" onclick="document.getElementById('item-modal').remove()">取消</button>
       <button class="btn btn-primary btn-sm" onclick="submitItemModal('${id||''}')">儲存</button>
-    </div>
-  </div>`;
+    </div></div>`;
   document.body.appendChild(overlay);
 }
 function getProfitPreviewHTML(price,cost){
-  price=Number(price)||0;cost=Number(cost)||0;
-  const p=price-cost;const r=price>0?Math.round(p/price*100):0;
-  return`<div class="pp-item"><span class="pp-label">毛利</span><span class="pp-val ${p>=0?'green':''}">${p>=0?'+':''}NT$ ${fmt(p)}</span></div>
-    <div class="pp-item"><span class="pp-label">毛利率</span><span class="pp-val ${r>=30?'green':''}">${r}%</span></div>`;
+  price=Number(price)||0;cost=Number(cost)||0;const p=price-cost;const r=price>0?Math.round(p/price*100):0;
+  return`<div class="pp-item"><span class="pp-label">毛利</span><span class="pp-val ${p>=0?'green':''}">${p>=0?'+':''}NT$ ${fmt(p)}</span></div><div class="pp-item"><span class="pp-label">毛利率</span><span class="pp-val ${r>=30?'green':''}">${r}%</span></div>`;
 }
-function updateProfitPreview(){
-  const pp=document.getElementById('profit-preview');
-  if(pp)pp.innerHTML=getProfitPreviewHTML(g('mi-price'),g('mi-cost'));
-}
+function updateProfitPreview(){const pp=document.getElementById('profit-preview');if(pp)pp.innerHTML=getProfitPreviewHTML(g('mi-price'),g('mi-cost'));}
 async function submitItemModal(existingId){
   const name=g('mi-name');if(!name){toast('請輸入品項名稱','error');return;}
   const item={id:existingId||uid(),name,price:Number(g('mi-price'))||0,cost:Number(g('mi-cost'))||0,unit:g('mi-unit')||'式',note:g('mi-note'),createdAt:existingId?(libItems.find(i=>i.id===existingId)?.createdAt||new Date().toISOString()):new Date().toISOString()};
@@ -870,9 +800,7 @@ async function confirmDeleteItem(id){
 
 // ── Summary View ──────────────────────────────────────
 function renderSummaryView(){
-  document.getElementById('topbar').innerHTML=`
-    <span class="topbar-title" id="topbar-title">匯總報表</span>
-    <div id="sync-status" class="sync-badge"><div class="sync-dot"></div><span>已同步</span></div>`;
+  document.getElementById('topbar').innerHTML=`<span class="topbar-title">匯總報表</span><div id="sync-status" class="sync-badge"><div class="sync-dot"></div><span>已同步</span></div>`;
   renderSummary();
 }
 function renderSummary(){
@@ -881,21 +809,17 @@ function renderSummary(){
   const totalRevenue=quotes.reduce((s,q)=>s+calcQ(q).total,0);
   const totalCost=quotes.reduce((s,q)=>s+calcQ(q).totalCost,0);
   const totalProfit=quotes.reduce((s,q)=>s+calcQ(q).profit,0);
-  const avgMargin=totalRevenue>0?Math.round((totalRevenue-totalCost-quotes.reduce((s,q)=>s+calcQ(q).tax,0))/(totalRevenue-quotes.reduce((s,q)=>s+calcQ(q).tax,0))*100):0;
+  const baseRev=quotes.reduce((s,q)=>s+calcQ(q).revenue,0);
+  const avgMargin=baseRev>0?Math.round(totalProfit/baseRev*100):0;
   const mc=avgMargin>=50?'green':avgMargin>=30?'gold':'red';
-  const rows=quotes.map(q=>{
-    const{total,totalCost,profit,margin}=calcQ(q);
-    const mc2=margin>=50?'good':margin>=30?'':' warn';
-    return`<tr onclick="goToQuote('${q.id}')">
-      <td><strong style="color:var(--accent2)">${esc(q.qno)}</strong></td>
-      <td><div>${esc(q.projectName||'（未命名）')}</div><div style="font-size:11px;color:var(--muted)">${esc(q.clientName||'—')}</div></td>
-      <td>${q.date||''}</td>
-      <td>${esc(q.salesperson||'')}</td>
-      <td class="r"><strong>NT$ ${fmt(total)}</strong></td>
-      <td class="r">NT$ ${fmt(totalCost)}</td>
-      <td class="r" style="color:${profit>=0?'var(--success)':'var(--danger)'}">NT$ ${fmt(profit)}</td>
-      <td class="r"><span class="margin-badge ${margin>=30?'good':'warn'}">${margin}%</span></td>
-    </tr>`;}).join('');
+  const rows=quotes.map(q=>{const{total,totalCost,profit,margin}=calcQ(q);return`<tr onclick="goToQuote('${q.id}')">
+    <td><strong style="color:var(--accent2)">${esc(q.qno)}</strong></td>
+    <td><div>${esc(q.projectName||'（未命名）')}</div><div style="font-size:11px;color:var(--muted)">${esc(q.clientName||'—')}</div></td>
+    <td>${q.date||''}</td><td>${esc(q.salesperson||'')}</td>
+    <td class="r"><strong>NT$ ${fmt(total)}</strong></td><td class="r">NT$ ${fmt(totalCost)}</td>
+    <td class="r" style="color:${profit>=0?'var(--success)':'var(--danger)'}">NT$ ${fmt(profit)}</td>
+    <td class="r"><span class="margin-badge ${margin>=30?'good':'warn'}">${margin}%</span></td>
+  </tr>`;}).join('');
   c.innerHTML=`
     <div class="summary-stats">
       <div class="stat-card"><div class="s-label">總報價金額（含稅）</div><div class="s-val gold">NT$ ${fmt(totalRevenue)}</div></div>
@@ -905,16 +829,69 @@ function renderSummary(){
     </div>
     <div class="summary-table-wrap">
       <h3>📋 歷史報價單匯總 <span class="badge-count">${quotes.length} 份</span></h3>
-      <table class="summary-table">
-        <thead><tr><th>報價單號</th><th>專案 / 客戶</th><th>日期</th><th>業務</th><th class="r">含稅金額</th><th class="r">總成本</th><th class="r">毛利</th><th class="r">毛利率</th></tr></thead>
-        <tbody>${rows||`<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:24px">尚無報價單</td></tr>`}</tbody>
-      </table>
+      <table class="summary-table"><thead><tr>
+        <th>報價單號</th><th>專案 / 客戶</th><th>日期</th><th>業務</th>
+        <th class="r">含稅金額</th><th class="r">總成本</th><th class="r">毛利</th><th class="r">毛利率</th>
+      </tr></thead><tbody>${rows||`<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:24px">尚無報價單</td></tr>`}</tbody></table>
       <div style="padding:12px 16px;font-size:11px;color:var(--muted)">點擊任一列可切換至該報價單進行編輯。</div>
     </div>`;
 }
-function goToQuote(id){
-  currentQuoteId=id;currentTab='form';
-  renderHistoryList();navigateTo('quotes');
+function goToQuote(id){currentQuoteId=id;currentTab='form';renderHistoryList();navigateTo('quotes');}
+
+// ── Settings View ─────────────────────────────────────
+function renderSettingsView(){
+  document.getElementById('topbar').innerHTML=`<span class="topbar-title">平台設定</span><div id="sync-status" class="sync-badge"><div class="sync-dot"></div><span>已同步</span></div>`;
+  const isDefaultLogo=settings.logo===DEFAULT_SETTINGS.logo;
+  const isDefaultStamp=settings.stamp===DEFAULT_SETTINGS.stamp;
+  const logoPrev=settings.logo?`<img src="${settings.logo}">`:`<span class="empty-hint">無圖片</span>`;
+  const stampPrev=settings.stamp?`<img src="${settings.stamp}">`:`<span class="empty-hint">無圖片</span>`;
+  const logoTag=isDefaultLogo?`<span style="font-size:10px;color:var(--success);background:rgba(90,171,143,.15);padding:2px 7px;border-radius:10px">✓ 使用預設圖片</span>`:`<span style="font-size:10px;color:var(--accent2);background:rgba(204,179,140,.15);padding:2px 7px;border-radius:10px">已自訂上傳</span>`;
+  const stampTag=isDefaultStamp?`<span style="font-size:10px;color:var(--success);background:rgba(90,171,143,.15);padding:2px 7px;border-radius:10px">✓ 使用預設圖片</span>`:`<span style="font-size:10px;color:var(--accent2);background:rgba(204,179,140,.15);padding:2px 7px;border-radius:10px">已自訂上傳</span>`;
+  document.getElementById('main-content').innerHTML=`
+    <div class="section-card" style="max-width:700px">
+      <div class="section-card-title">🖼 報價單圖片設定</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.6">LOGO 和印章已預設載入，所有人開啟平台都會自動顯示。若需要替換圖片，可在此上傳自訂版本（儲存於此瀏覽器）。</p>
+      <div class="settings-grid">
+        <div class="img-upload-card">
+          <h3>公司 LOGO ${logoTag}</h3>
+          <p>顯示於報價單左上角，建議使用白底或透明底的 PNG 圖片。</p>
+          <div class="img-preview-box" id="logo-preview-box" style="background:#3a3a3a;min-height:80px">${logoPrev}</div>
+          <div class="upload-btn-wrap">
+            <button class="btn btn-ghost btn-sm btn-full">📁 選擇 LOGO 圖片</button>
+            <input type="file" accept="image/*" onchange="handleImgUpload(event,'logo')">
+          </div>
+          ${!isDefaultLogo?`<button class="btn btn-ghost btn-sm" style="color:var(--danger)" onclick="clearImg('logo')">↩ 還原預設</button>`:''}
+        </div>
+        <div class="img-upload-card">
+          <h3>發票章 / 公司印章 ${stampTag}</h3>
+          <p>顯示於報價單左下角匯款帳戶旁，建議使用透明底的 PNG 圖片。</p>
+          <div class="img-preview-box" id="stamp-preview-box">${stampPrev}</div>
+          <div class="upload-btn-wrap">
+            <button class="btn btn-ghost btn-sm btn-full">📁 選擇印章圖片</button>
+            <input type="file" accept="image/*" onchange="handleImgUpload(event,'stamp')">
+          </div>
+          ${!isDefaultStamp?`<button class="btn btn-ghost btn-sm" style="color:var(--danger)" onclick="clearImg('stamp')">↩ 還原預設</button>`:''}
+        </div>
+      </div>
+    </div>`;
+}
+function handleImgUpload(event, key){
+  const file=event.target.files[0];if(!file)return;
+  if(file.size>2*1024*1024){toast('圖片不能超過 2MB','error');return;}
+  const reader=new FileReader();
+  reader.onload=e=>{
+    settings[key]=e.target.result;
+    saveSettings();
+    renderSettingsView();
+    toast(`${key==='logo'?'LOGO':'印章'}已上傳 ✓`,'success');
+  };
+  reader.readAsDataURL(file);
+}
+function clearImg(key){
+  settings[key]=DEFAULT_SETTINGS[key]; // 還原為預設路徑，非 null
+  saveSettings();
+  renderSettingsView();
+  toast('已還原為預設圖片','info');
 }
 </script>
 </body>
